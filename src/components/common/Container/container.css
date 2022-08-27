@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  width: 100%;
+}
+
+.bg {
+  background-color: #fbfdfe;
+}
+
+.wrapper {
+  display: flex;
+  width: 90%;
+  max-width: 1280px;
+}
+
+.nav {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 0;
+}
+
+.footer {
+  flex-direction: column;
+  padding: 5rem 0 3rem 0;
+}
+
+.banner {
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.section {
+  padding: 5rem 0;
+  justify-content: center;
+}
