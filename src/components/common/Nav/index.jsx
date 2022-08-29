@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Container from "../Container";
-import RoundButton from "../RoundButton";
+import CTAButton from "../CTAButton";
 import "./nav.css";
 
 export default function Nav() {
@@ -28,11 +28,8 @@ export default function Nav() {
           </Link>
           {!loginStatus ? (
             <div className="menu_item_auth_group">
-              <Link to="/login">
-                <RoundButton variant="primary">Login</RoundButton>
-              </Link>
-              <Link to="/sign-up">
-                <RoundButton variant="secondary">Sign up</RoundButton>
+              <Link to="/get-started">
+                <CTAButton variant="primary">Get Started</CTAButton>
               </Link>
             </div>
           ) : (
@@ -49,9 +46,9 @@ export default function Nav() {
                 </div> */}
               </Link>
               <Link to="/create-project">
-                <RoundButton variant="primary">Create Project</RoundButton>
+                <CTAButton variant="primary">Create Project</CTAButton>
               </Link>
-              <RoundButton
+              <CTAButton
                 variant="secondary"
                 onClick={() => {
                   localStorage.clear();
@@ -60,7 +57,7 @@ export default function Nav() {
                 }}
               >
                 Log out
-              </RoundButton>
+              </CTAButton>
             </div>
           )}
         </div>

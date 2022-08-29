@@ -11,7 +11,7 @@ export default function Footer() {
 
   return (
     <footer>
-      <Container bg={true} variant="footer">
+      <Container bgDark={true} variant="footer">
         <div className="footer-nav">
           <div className="branding-section">
             <p>Logo</p>
@@ -22,13 +22,10 @@ export default function Footer() {
             <div>
               {!loginStatus ? (
                 <>
-                  <p className="nav-section-title">Get Started</p>
+                  <p className="nav-section-title">Welcome</p>
                   <div className="nav-section-menu">
-                    <Link to="/login" className="nav-section-menu-item">
-                      Login
-                    </Link>
-                    <Link to="/sign-up" className="nav-section-menu-item">
-                      Sign up
+                    <Link to="/get-started" className="nav-section-menu-item">
+                      Get Started
                     </Link>
                   </div>
                 </>
