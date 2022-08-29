@@ -8,8 +8,7 @@ import AllWorkshopsPage from "./pages/AllWorshopsPage";
 import WorkshopDetailPage from "./pages/WorkshopDetailsPage";
 import CreateWorkshopPage from "./pages/CreateWorkshopPage";
 
-import LoginPage from "./pages/LoginPage";
-import SignUpPage from "./pages/SignUpPage";
+import GetStartedPage from "./pages/GetStartedPage";
 import Footer from "./components/common/Footer";
 
 function App() {
@@ -20,8 +19,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<HomePage />} />
           <Route path="/about-us" element={<AboutUsPage />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/sign-up" element={<SignUpPage />} />
+          <Route path="/get-started" element={<GetStartedPage />} />
           <Route path="/all-workshops" element={<AllWorkshopsPage />} />
           <Route path="/workshop/:id" element={<WorkshopDetailPage />} />
           <Route path="/create-workshop" element={<CreateWorkshopPage />} />
