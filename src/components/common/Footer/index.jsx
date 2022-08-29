@@ -11,7 +11,7 @@ export default function Footer() {
 
   return (
     <footer>
-      <Container bgDark={true} variant="footer">
+      <Container containerBg="bg-dark" wrapperVariant="footer">
         <div className="footer-nav">
           <div className="branding-section">
             <p>Logo</p>

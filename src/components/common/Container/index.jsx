@@ -1,20 +1,33 @@
 import React from "react";
 import "./container.css";
 
-export default function Container({ children, bg, bgDark, variant }) {
+const selectContainerBg = containerBg => {
+  switch (containerBg) {
+    case "bg-light":
+      return "bg-light";
+    case "bg-dark":
+      return "bg-dark";
+    default:
+      return "";
+  }
+};
+const selectWrapperVariant = wrapperVariant => {
+  switch (wrapperVariant) {
+    case "nav":
+      return "nav";
+    case "footer":
+      return "footer";
+    case "banner":
+      return "banner";
+    default:
+      return "section";
+  }
+};
+
+export default function Container({ children, containerBg, wrapperVariant }) {
   return (
-    <div className={`container ${bg ? "bg" : bgDark ? "bg-dark" : ""}`}>
-      <div
-        className={`wrapper ${
-          variant === "nav"
-            ? "nav"
-            : variant === "footer"
-            ? "footer"
-            : variant === "banner"
-            ? "banner"
-            : "section"
-        }`}
-      >
+    <div className={`container ${selectContainerBg(containerBg)}`}>
+      <div className={`wrapper ${selectWrapperVariant(wrapperVariant)}`}>
         {children}
       </div>
     </div>

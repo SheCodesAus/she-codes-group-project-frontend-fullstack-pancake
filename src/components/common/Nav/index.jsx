@@ -11,7 +11,7 @@ export default function Nav() {
 
   return (
     <nav>
-      <Container variant="nav">
+      <Container wrapperVariant="nav">
         <Link to="/">
           Logo
           {/* <img src={Logo} alt="PIXELFOTO_logo" className="header-logo" /> */}
