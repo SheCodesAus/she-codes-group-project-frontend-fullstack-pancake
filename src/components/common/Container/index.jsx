@@ -1,9 +1,9 @@
 import React from "react";
 import "./container.css";
 
-export default function Container({ children, bg, variant }) {
+export default function Container({ children, bg, bgDark, variant }) {
   return (
-    <div className={`container ${bg ? "bg" : ""}`}>
+    <div className={`container ${bg ? "bg" : bgDark ? "bg-dark" : ""}`}>
       <div
         className={`wrapper ${
           variant === "nav"

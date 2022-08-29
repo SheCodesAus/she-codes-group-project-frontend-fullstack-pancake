@@ -8,6 +8,9 @@
 .bg {
   background-color: #fbfdfe;
 }
+.bg-dark {
+  background-color: #03282f;
+}
 
 .wrapper {
   display: flex;
@@ -21,10 +24,18 @@
   justify-content: space-between;
   padding: 1.5rem 0;
 }
+.nav a {
+  color: #3e3e40;
+}
 
 .footer {
   flex-direction: column;
   padding: 5rem 0 3rem 0;
+}
+
+.footer p,
+a {
+  color: #fff;
 }
 
 .banner {
