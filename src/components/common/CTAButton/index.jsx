@@ -1,10 +1,10 @@
 import React from "react";
-import "./roundButton.css";
+import "./ctaButton.css";
 
-export default function RoundButton({ children, variant, onClick }) {
+export default function CTAButton({ children, variant, onClick }) {
   return (
     <button
-      className={`round-button ${
+      className={`cta-button ${
         variant === "primary" ? "primary" : "secondary"
       }`}
       onClick={onClick}
