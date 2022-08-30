@@ -1,0 +1,45 @@
+.ProjectCardContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  gap: 10px;
+}
+.ImageDiv {
+  border-radius: 25px;
+  width: 100%;
+}
+
+.ImageDiv img {
+  width: 100%;
+  border-radius: 25px;
+}
+.CoverImage {
+}
+.TextDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 5px;
+  width: 100%;
+}
+
+.TitleDifficulty {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.WorkshopTitle {
+}
+.LanguageLocation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  gap: 5px;
+  width: 100%;
+}
+.DeliveryMethod {
+}
