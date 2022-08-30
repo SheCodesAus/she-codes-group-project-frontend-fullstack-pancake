@@ -2,30 +2,29 @@ import React from "react";
 import Container from "../components/common/Container";
 import TwoColumn from "../components/common/TwoColumn";
 import Placeholder from "../assets/images/placeholder.svg";
-import SkillTag from "../components/common/SkillTag";
-import ProjectCoverCard from "../components/common/ProjectCoverCard";
 
 export default function HomePage() {
   return (
     <>
       <Container>
         <TwoColumn
-          heading="2"
-          paragraph="hello"
-          button="submit"
+          heading="Your one-stop workshop registration spot"
+          paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacus, fames enim ullamcorper platea. Nibh dictum faucibus adipiscing dictum pellentesque a dictumst. Ornare amet, nec arcu enim nec libero diam amet amet. Purus ut quam nisl aenean elit, euismod proin augue. Amet, maecenas quis viverra quam. Ipsum vitae, vitae, in risus eu magna vel."
+          button="View All Workshops"
           image={Placeholder}
-          link="/"
-          direction=""
+          link="/all-workshops"
         />
       </Container>
-      <SkillTag>HTML</SkillTag>
-      <ProjectCoverCard
-        image={Placeholder}
-        workshoptitle="Introduction to HTML"
-        language="HTML"
-        deliverymethod="Online"
-        link="/"
-      />
+      <Container containerBg="bg-light">
+        <TwoColumn
+          direction="reverse"
+          heading="Made by some girls passionate in tech"
+          paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacus, fames enim ullamcorper platea. Nibh dictum faucibus adipiscing dictum pellentesque a dictumst. Ornare amet, nec arcu enim nec libero diam amet amet. Purus ut quam nisl aenean elit, euismod proin augue. Amet, maecenas quis viverra quam. Ipsum vitae, vitae, in risus eu magna vel."
+          button="Learn More"
+          image={Placeholder}
+          link="/about-us"
+        />
+      </Container>
     </>
   );
 }
