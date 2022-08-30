@@ -26,9 +26,7 @@ export default function ProjectCoverCard({
           <div className="LanguageLocation">
             <div className="language-tags">
               {languages.map((language, index) => (
-                <SkillTag key={index} tagColor={language.tagColor}>
-                  {language.language}
-                </SkillTag>
+                <SkillTag key={index}>{language}</SkillTag>
               ))}
             </div>
 
