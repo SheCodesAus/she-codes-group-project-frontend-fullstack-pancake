@@ -1,10 +1,18 @@
-import React from "react"
-import "./skillTag.css"
+import React from "react";
+import "./skillTag.css";
 
-export default function SkillTag({ children }) {
-    return (
-        <span className="SkillTag">{children}</span>
-
-    )
+const selectTagColor = tagColor => {
+  switch (tagColor) {
+    case "tag-brand-primary":
+      return "tag-brand-primary";
+    case "tag-brand-secondary":
+      return "tag-brand-secondary";
+    default:
+      return "";
+  }
+};
+export default function SkillTag({ children, tagColor }) {
+  return (
+    <span className={`SkillTag ${selectTagColor(tagColor)}`}>{children}</span>
+  );
 }
-
