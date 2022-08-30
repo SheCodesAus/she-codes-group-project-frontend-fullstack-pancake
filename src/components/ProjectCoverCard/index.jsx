@@ -1,12 +1,14 @@
 import React from "react";
-import SkillTag from "../SkillTag";
+import { Link } from "react-router-dom";
+import SkillLevel from "../common/SkillLevel";
+import SkillTag from "../common/SkillTag";
 import "./ProjectCoverCard.css";
-import { Link, useNavigate } from "react-router-dom";
 
 export default function ProjectCoverCard({
   image,
   workshoptitle,
-  language,
+  languages,
+  difficulty,
   deliverymethod,
   link,
 }) {
@@ -14,14 +16,22 @@ export default function ProjectCoverCard({
     <Link to={link}>
       <div className="ProjectCardContainer">
         <div className="ImageDiv">
-          <img className="CoverImage" src={image}></img>
+          <img className="CoverImage" src={image} alt={workshoptitle} />
         </div>
         <div className="TextDiv">
           <div className="TitleDifficulty">
             <p className="WorkshopTitle">{workshoptitle}</p>
+            <SkillLevel level={difficulty} />
           </div>
           <div className="LanguageLocation">
-            <SkillTag>{language}</SkillTag>
+            <div className="language-tags">
+              {languages.map((language, index) => (
+                <SkillTag key={index} tagColor={language.tagColor}>
+                  {language.language}
+                </SkillTag>
+              ))}
+            </div>
+
             <span className="DeliveryMethod">{deliverymethod}</span>
           </div>
         </div>
