@@ -1,14 +1,27 @@
+.header-logo-link {
+  display: flex;
+  justify-content: center;
+}
+
 .header-logo {
-  width: 15rem;
+  height: 6rem;
 }
 
 .menu_items_wrapper {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
+  /* display: flex;
+  flex-direction: row;
+  align-items: center; */
   gap: 1.5rem;
+  width: 100%;
 }
-
+.static_menu_items {
+  display: flex;
+  gap: 1.5rem;
+  margin-right: auto;
+}
 .menu_item_home {
   transition: all 0.5s;
 }
@@ -21,6 +34,7 @@
   flex-direction: row;
   align-items: center;
   gap: 0.5rem;
+  margin-left: auto;
 }
 
 .nav-authenticated {

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-// import Logo from "../../../assets/img/logo-mono.svg";
+import Logo from "../../../assets/logo/logo-text-only-primary-light.svg";
 import Container from "../Container";
 import "./footer.css";
 
@@ -14,8 +14,7 @@ export default function Footer() {
       <Container containerBg="bg-dark" wrapperVariant="footer">
         <div className="footer-nav">
           <div className="branding-section">
-            <p>Logo</p>
-            {/* <img src={Logo} alt="PIXELFOTO_logo" className="footer-logo" /> */}
+            <img src={Logo} alt="thinkle_logo" className="footer-logo" />
             <p>Thinkle is ...</p>
           </div>
           <nav className="nav-section">
