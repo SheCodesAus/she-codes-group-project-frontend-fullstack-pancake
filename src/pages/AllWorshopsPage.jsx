@@ -8,7 +8,7 @@ export default function AllWorkshopsPage() {
   return (
     <>
       <Container wrapperVariant="banner">
-        <Banner>Expolore Workshops</Banner>
+        <Banner>Explore Workshops</Banner>
       </Container>
       <Container>
         {mockWorkshopsData.map((workshop, index) => {
