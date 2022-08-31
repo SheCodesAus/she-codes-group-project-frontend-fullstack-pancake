@@ -1,4 +1,5 @@
 import React from "react";
+import Banner from "../components/common/Banner";
 import Container from "../components/common/Container";
 import ProjectCoverCard from "../components/ProjectCoverCard";
 import { mockWorkshopsData } from "../mock/workshopsData";
@@ -6,6 +7,9 @@ import { mockWorkshopsData } from "../mock/workshopsData";
 export default function AllWorkshopsPage() {
   return (
     <>
+      <Container wrapperVariant="banner">
+        <Banner>Expolore Workshops</Banner>
+      </Container>
       <Container>
         {mockWorkshopsData.map((workshop, index) => {
           return (
