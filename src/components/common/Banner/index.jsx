@@ -6,7 +6,7 @@ export default function Banner({ variant, children }) {
     <div
       className={`banner ${variant === "center-align" ? "center-align" : ""}`}
     >
-      <h1> {children}</h1>
+      <h1>{children}</h1>
     </div>
   );
 }
