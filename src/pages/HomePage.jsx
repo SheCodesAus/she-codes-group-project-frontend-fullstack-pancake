@@ -1,7 +1,9 @@
 import React from "react";
 import Container from "../components/common/Container";
 import TwoColumn from "../components/common/TwoColumn";
+import Slider from "../components/Slider";
 import Placeholder from "../assets/images/placeholder.svg";
+import { mockWorkshopsData } from "../mock/workshopsData";
 
 export default function HomePage() {
   return (
@@ -16,6 +18,13 @@ export default function HomePage() {
         />
       </Container>
       <Container containerBg="bg-light">
+        <Slider
+          title="Latest Workshops"
+          subTitle="Have a quick look into what's happening at the moment..."
+          slides={mockWorkshopsData}
+        />
+      </Container>
+      <Container>
         <TwoColumn
           direction="reverse"
           heading="Made by some girls passionate in tech"
