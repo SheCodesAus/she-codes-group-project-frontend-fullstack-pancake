@@ -7,7 +7,6 @@ import AboutUsPage from "./pages/AboutUsPage";
 import AllWorkshopsPage from "./pages/AllWorshopsPage";
 import WorkshopDetailPage from "./pages/WorkshopDetailsPage";
 import CreateWorkshopPage from "./pages/CreateWorkshopPage";
-
 import GetStartedPage from "./pages/GetStartedPage";
 import Footer from "./components/common/Footer";
 

@@ -1,0 +1,18 @@
+.SkillTag {
+  border-radius: 999px;
+  background-color: #edf6f9;
+  padding: 0.75rem;
+  width: fit-content;
+  font-size: 14px;
+  color: #0e3e47;
+}
+
+.tag-brand-primary {
+  background-color: #55b0ab;
+  color: #fff;
+}
+
+.tag-brand-secondary {
+  background-color: #ffddd2;
+  color: #55362a;
+}
