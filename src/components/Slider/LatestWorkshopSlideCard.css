@@ -1,0 +1,34 @@
+.latest-workshop-slide-card {
+  width: 70%;
+  border-radius: 25px;
+  background-color: #fff;
+}
+
+.latest-workshop-slide-card-image {
+  width: 100%;
+  height: 50vh;
+  border-radius: 25px 25px 0 0;
+}
+
+.latest-workshop-slide-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 25px 25px 0 0;
+}
+
+.latest-workshop-slide-card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.5rem 2rem 0 2rem;
+}
+
+.latest-workshop-slide-card-text-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.latest-workshop-slide-card-p {
+  padding: 1.5rem 2rem 2rem 2rem;
+}
