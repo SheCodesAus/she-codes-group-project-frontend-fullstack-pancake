@@ -1,13 +1,12 @@
 import React from "react";
 import "./banner.css";
 
-export default function Banner({ heading, variant, children }) {
+export default function Banner({ variant, children }) {
   return (
-    <div className="banner">
-      <h1> {heading}</h1>
-      <div className={`${variant === "banner-tags" ? "banner-tags" : ""}`}>
-        {children}
-      </div>
+    <div
+      className={`banner ${variant === "center-align" ? "center-align" : ""}`}
+    >
+      <h1>{children}</h1>
     </div>
   );
 }

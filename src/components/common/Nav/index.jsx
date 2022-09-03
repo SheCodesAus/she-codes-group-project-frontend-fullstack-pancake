@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Container from "../Container";
 import CTAButton from "../CTAButton";
+import Logo from "../../../assets/logo/logo-vertical-color.svg";
 import "./nav.css";
 
 export default function Nav() {
@@ -12,20 +13,26 @@ export default function Nav() {
   return (
     <nav>
       <Container wrapperVariant="nav">
-        <Link to="/">
-          Logo
-          {/* <img src={Logo} alt="PIXELFOTO_logo" className="header-logo" /> */}
-        </Link>
         <div className="menu_items_wrapper">
-          <Link to="/" className="menu_item_home">
-            Home
+          {/* static menu items */}
+          <div className="static_menu_items">
+            <Link to="/" className="menu_item_home">
+              Home
+            </Link>
+            <Link to="/about-us" className="menu_item_home">
+              About Us
+            </Link>
+            <Link to="/all-workshops" className="menu_item_home">
+              Workshops
+            </Link>
+          </div>
+
+          {/* logo */}
+          <Link to="/" className="header-logo-link">
+            <img src={Logo} alt="Thinkle_logo" className="header-logo" />
           </Link>
-          <Link to="/about-us" className="menu_item_home">
-            About Us
-          </Link>
-          <Link to="/all-workshops" className="menu_item_home">
-            Workshops
-          </Link>
+
+          {/* dynamic menu items */}
           {!loginStatus ? (
             <div className="menu_item_auth_group">
               <Link to="/get-started">
