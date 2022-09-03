@@ -4,7 +4,6 @@ import TwoColumn from "../components/common/TwoColumn";
 import Slider from "../components/Slider";
 import Placeholder from "../assets/images/placeholder.svg";
 import { mockWorkshopsData } from "../mock/workshopsData";
-import Search from "../components/common/Search";
 
 export default function HomePage() {
   return (
