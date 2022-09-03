@@ -9,6 +9,7 @@ import WorkshopDetailPage from "./pages/WorkshopDetailsPage";
 import CreateWorkshopPage from "./pages/CreateWorkshopPage";
 import GetStartedPage from "./pages/GetStartedPage";
 import Footer from "./components/common/Footer";
+// import Search from "./components/common/Search";
 
 function App() {
   return (
@@ -22,6 +23,8 @@ function App() {
           <Route path="/all-workshops" element={<AllWorkshopsPage />} />
           <Route path="/workshop/:id" element={<WorkshopDetailPage />} />
           <Route path="/create-workshop" element={<CreateWorkshopPage />} />
+          {/* <Route path="/search-workshop" element={<Search/>} /> */}
+
         </Routes>
         <Footer />
       </div>

@@ -1,31 +1,16 @@
 import React from "react";
 import Banner from "../components/common/Banner";
 import Container from "../components/common/Container";
-import Grid from "../components/common/Grid";
-import ProjectCoverCard from "../components/ProjectCoverCard";
+import Search from "../components/common/Search";
 import { mockWorkshopsData } from "../mock/workshopsData";
 
 export default function AllWorkshopsPage() {
   return (
     <>
       <Container wrapperVariant="banner">
-        <Banner>Explore Workshops</Banner>
+        <Banner>Explore Workshops</Banner>        
+        <Search data={mockWorkshopsData} />
       </Container>
-      <Grid>
-        {mockWorkshopsData.map((workshop, index) => {
-          return (
-            <ProjectCoverCard
-              key={index}
-              image={workshop.image}
-              workshoptitle={workshop.title}
-              languages={workshop.languages}
-              deliverymethod={workshop.location}
-              difficulty={workshop.difficulty_level}
-              link="/"
-            />
-          );
-        })}
-      </Grid>
     </>
   );
 }
