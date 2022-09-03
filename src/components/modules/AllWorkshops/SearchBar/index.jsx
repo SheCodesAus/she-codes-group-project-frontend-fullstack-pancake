@@ -19,7 +19,6 @@ export default function SearchBar({ data, setFilteredData }) {
       return "";
     });
     setFilteredData(newData);
-    console.log("newData: ", newData);
   }, [searchTermToEnter]);
 
   return (
@@ -34,7 +33,6 @@ export default function SearchBar({ data, setFilteredData }) {
         }}
       />
       <CTAButton
-        variant="primary"
         onClick={() => {
           setSearchTermToEnter(searchTerm);
         }}

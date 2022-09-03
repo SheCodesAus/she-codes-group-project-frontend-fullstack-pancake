@@ -19,7 +19,7 @@ export default function TwoColumn({
         <h2>{heading}</h2>
         <p>{paragraph}</p>
         <Link to={link}>
-          <CTAButton variant="primary">{button}</CTAButton>
+          <CTAButton>{button}</CTAButton>
         </Link>
       </div>
       <div className="columnImage">
