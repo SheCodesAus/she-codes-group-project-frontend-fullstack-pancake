@@ -21,8 +21,8 @@
 .slide-control {
   font-size: 32px;
   cursor: pointer;
-  transition: all 0.5s;
+  transition: var(--transition);
 }
 .slide-control:hover {
-  color: #55b0ab;
+  color: var(--primary-300);
 }

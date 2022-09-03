@@ -6,7 +6,7 @@
   width: 100%;
 }
 .ImageDiv {
-  border-radius: 25px;
+  border-radius: var(--borderRadius-large);
   width: 100%;
   height: 40vh;
 }
@@ -15,7 +15,7 @@
   width: 100%;
   height: 40vh;
   object-fit: cover;
-  border-radius: 25px;
+  border-radius: var(--borderRadius-large);
 }
 
 .TextDiv {
