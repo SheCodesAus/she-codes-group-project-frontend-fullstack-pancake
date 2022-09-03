@@ -108,4 +108,5 @@ form {
   flex-direction: column;
   gap: 2rem;
   max-width: 640px;
+  align-items: center;
 }
