@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import ProjectCoverCard from "../../ProjectCoverCard";
+import ProjectCoverCard from "../ProjectCoverCard";
 import "./search.css";
 
 function Search({ data }) {
   const [searchTerm, setSearchTerm] = useState("");
   return (
     <div className="search">
+        
       <input
         type="text"
         placeholder="Search..."
