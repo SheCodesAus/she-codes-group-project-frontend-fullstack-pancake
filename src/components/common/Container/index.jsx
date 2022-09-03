@@ -7,6 +7,8 @@ const selectContainerBg = containerBg => {
       return "bg-light";
     case "bg-dark":
       return "bg-dark";
+    case "bg-primary":
+      return "bg-primary";
     default:
       return "";
   }
