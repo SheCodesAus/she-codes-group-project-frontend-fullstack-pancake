@@ -39,7 +39,9 @@
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
 
   /* border radius */
+  --borderRadius-tiny: 5px;
   --borderRadius-small: 10px;
+  --borderRadius-medium: 15px;
   --borderRadius-large: 25px;
   --borderRadius-large-top: 25px 25px 0 0;
   --borderRadius-round: 999px;
@@ -98,10 +100,6 @@ h1 {
 
 h2 {
   font-size: 36px;
-}
-
-.auth-form-container {
-  width: 500px;
 }
 
 form {
