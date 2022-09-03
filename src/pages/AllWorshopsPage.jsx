@@ -9,6 +9,8 @@ export default function AllWorkshopsPage() {
     <>
       <Container wrapperVariant="banner">
         <Banner>Explore Workshops</Banner>
+      </Container>
+      <Container>
         <AllWorkshops data={mockWorkshopsData} />
       </Container>
     </>

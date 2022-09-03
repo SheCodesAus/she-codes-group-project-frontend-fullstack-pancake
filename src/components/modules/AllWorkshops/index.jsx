@@ -2,16 +2,17 @@ import React, { useState } from "react";
 import FilteredList from "./FilteredList";
 import SearchBar from "./SearchBar";
 import "./index.css";
+import Grid from "../../common/Grid";
 
-function Search({ data }) {
+export default function AllWorkshops({ data }) {
   const [filteredData, setFilteredData] = useState(data);
 
   return (
-    <div className="search">
+    <>
       <SearchBar data={data} setFilteredData={setFilteredData} />
-      <FilteredList filteredData={filteredData} />
-    </div>
+      <Grid>
+        <FilteredList filteredData={filteredData} />
+      </Grid>
+    </>
   );
 }
-
-export default Search;
