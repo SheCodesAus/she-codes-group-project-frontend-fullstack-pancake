@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Input from "../../../common/Input";
 import CTAButton from "../../../common/CTAButton";
+import Loading from "../../../common/Loading";
 import { login } from "../../../../services/auth/login";
 
 export default function LoginForm() {
   const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
   const [credentials, setCredentials] = useState({
     username: "",
     password: "",
@@ -29,7 +31,7 @@ export default function LoginForm() {
   const handleSubmit = async event => {
     event.preventDefault();
     console.log("Loggin in with credentials: ", credentials);
-
+    setLoading(true);
     if (credentials.username && credentials.password) {
       login(credentials).then(data => {
         console.log("login response data: ... ", data);
@@ -38,6 +40,7 @@ export default function LoginForm() {
           window.localStorage.setItem("user_id", data.id);
           window.localStorage.setItem("login", true);
           navigate("/");
+          setLoading(false);
           window.location.reload();
         } else {
         }
@@ -68,6 +71,7 @@ export default function LoginForm() {
       <CTAButton type="submit" width="full">
         Login
       </CTAButton>
+      {loading && <Loading />}
     </form>
   );
 }
