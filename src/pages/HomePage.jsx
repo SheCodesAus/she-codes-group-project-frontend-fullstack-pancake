@@ -1,7 +1,7 @@
 import React from "react";
 import Container from "../components/common/Container";
 import TwoColumn from "../components/common/TwoColumn";
-import Slider from "../components/Slider";
+import Slider from "../components/modules/Home/Slider";
 import Placeholder from "../assets/images/placeholder.svg";
 import { mockWorkshopsData } from "../mock/workshopsData";
 import Grid from "../components/common/Grid";
