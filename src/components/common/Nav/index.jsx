@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import Container from "../Container";
 import CTAButton from "../CTAButton";
 import Logo from "../../../assets/logo/logo-vertical-color.svg";
@@ -7,12 +7,16 @@ import "./nav.css";
 
 export default function Nav() {
   const navigate = useNavigate();
+  const path = useLocation().pathname;
   const loginStatus = window.localStorage.getItem("login");
   const userId = window.localStorage.getItem("user_id");
 
   return (
     <nav>
-      <Container wrapperVariant="nav">
+      <Container
+        containerBg={path === "/get-started" ? "bg-light" : ""}
+        wrapperVariant="nav"
+      >
         <div className="menu_items_wrapper">
           {/* static menu items */}
           <div className="static_menu_items">
@@ -36,7 +40,7 @@ export default function Nav() {
           {!loginStatus ? (
             <div className="menu_item_auth_group">
               <Link to="/get-started">
-                <CTAButton variant="primary">Get Started</CTAButton>
+                <CTAButton>Get Started</CTAButton>
               </Link>
             </div>
           ) : (
@@ -53,10 +57,10 @@ export default function Nav() {
                 </div> */}
               </Link>
               <Link to="/create-project">
-                <CTAButton variant="primary">Create Project</CTAButton>
+                <CTAButton>Create Project</CTAButton>
               </Link>
               <CTAButton
-                variant="secondary"
+                color="secondary"
                 onClick={() => {
                   localStorage.clear();
                   navigate("/");
