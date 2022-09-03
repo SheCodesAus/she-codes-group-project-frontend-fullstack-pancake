@@ -1,4 +1,4 @@
-import SkillLevel from "../common/SkillLevel";
+import SkillLevel from "../../../common/SkillLevel";
 import "./LatestWorkshopSlideCard.css";
 
 export default function LatestWorkshopSlideCard({ slide }) {

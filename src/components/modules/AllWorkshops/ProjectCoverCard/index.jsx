@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import SkillLevel from "../common/SkillLevel";
-import SkillTag from "../common/SkillTag";
+import SkillLevel from "../../../common/SkillLevel";
+import SkillTag from "../../../common/SkillTag";
 import "./ProjectCoverCard.css";
 
 export default function ProjectCoverCard({
