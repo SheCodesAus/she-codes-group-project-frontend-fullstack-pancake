@@ -21,6 +21,8 @@ const selectWrapperVariant = wrapperVariant => {
       return "footer";
     case "banner":
       return "banner";
+    case "auth":
+      return "auth";
     default:
       return "section";
   }

@@ -5,7 +5,7 @@ import GetStarted from "../components/modules/GetStarted";
 export default function GetStartedPage() {
   return (
     <>
-      <Container containerBg="bg-light">
+      <Container containerBg="bg-light" wrapperVariant="auth">
         <GetStarted />
       </Container>
     </>
