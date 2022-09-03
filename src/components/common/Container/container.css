@@ -48,6 +48,7 @@ a {
 }
 
 .section {
+  flex-direction: column;
   padding: 5rem 0;
   justify-content: center;
 }
