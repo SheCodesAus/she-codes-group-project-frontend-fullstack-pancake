@@ -35,9 +35,6 @@ export default function HomePage() {
           link="/about-us"
         />
       </Container>
-      <Container>
-        <Search/>
-      </Container>
     </>
   );
 }
