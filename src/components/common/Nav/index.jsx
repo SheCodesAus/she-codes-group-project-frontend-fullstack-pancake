@@ -35,7 +35,7 @@ export default function Nav() {
           </Link>
 
           {!loginStatus ? (
-            <div className="menu_item_auth_group">
+            <div className="dynamic_menu_items">
               <Link to="/get-started">
                 <CTAButton>Get Started</CTAButton>
               </Link>
