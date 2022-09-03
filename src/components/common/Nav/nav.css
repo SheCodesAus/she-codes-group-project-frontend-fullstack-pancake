@@ -10,34 +10,37 @@
 .menu_items_wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  align-items: center;
-  /* display: flex;
-  flex-direction: row;
-  align-items: center; */
   gap: 1.5rem;
   width: 100%;
 }
+
 .static_menu_items {
   display: flex;
   gap: 1.5rem;
-  margin-right: auto;
+  align-items: center;
 }
-.menu_item_home {
+.menu_item {
   transition: var(--transition);
 }
-.menu_item_home:hover {
+.menu_item:hover {
   color: var(--primary-300);
 }
 
-.menu_item_auth_group {
+.dynamic_menu_items {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1.5rem;
   margin-left: auto;
 }
-
-.nav-authenticated {
+.dynamic_menu_butons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+.dynamic_menu_user {
   display: flex;
   align-items: center;
   gap: 0.25rem;
