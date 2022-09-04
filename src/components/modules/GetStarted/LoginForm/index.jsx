@@ -5,7 +5,7 @@ import CTAButton from "../../../common/CTAButton";
 import Loading from "../../../common/Loading";
 import { login } from "../../../../services/auth/login";
 
-export default function LoginForm() {
+export default function LoginForm({ setSubmitMessage, setSubmitSuccess }) {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
   const [credentials, setCredentials] = useState({
@@ -31,20 +31,29 @@ export default function LoginForm() {
   const handleSubmit = async event => {
     event.preventDefault();
     console.log("Loggin in with credentials: ", credentials);
-    setLoading(true);
     if (credentials.username && credentials.password) {
-      login(credentials).then(data => {
-        console.log("login response data: ... ", data);
-        if (data.token) {
-          window.localStorage.setItem("token", data.token);
-          window.localStorage.setItem("user_id", data.id);
-          window.localStorage.setItem("login", true);
-          navigate("/");
-          setLoading(false);
-          window.location.reload();
-        } else {
-        }
-      });
+      setLoading(true);
+      login(credentials)
+        .then(data => {
+          console.log("login response data: ... ", data);
+          if (data.token) {
+            window.localStorage.setItem("token", data.token);
+            window.localStorage.setItem("user_id", data.id);
+            window.localStorage.setItem("login", true);
+            navigate("/");
+            setLoading(false);
+            window.location.reload();
+          } else {
+            const { non_field_errors } = data;
+            setSubmitMessage(non_field_errors[0]);
+            setSubmitSuccess(false);
+            setLoading(false);
+          }
+        })
+        .catch(err => console.log("login err: ", err.message));
+    } else {
+      setSubmitMessage("Please enter all fields");
+      setSubmitSuccess(false);
     }
   };
 
