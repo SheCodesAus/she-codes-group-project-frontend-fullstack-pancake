@@ -26,3 +26,15 @@
   color: var(--primary-400);
   cursor: pointer;
 }
+
+.submit-message {
+  margin-top: 0.5rem;
+}
+
+.success {
+  color: var(--alert-success);
+}
+
+.fail {
+  color: var(--alert-danger);
+}
