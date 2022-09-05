@@ -4,6 +4,9 @@
   gap: 0.5rem;
   width: 100%;
 }
+.w-content {
+  width: fit-content;
+}
 .no-label {
   gap: 0;
 }
