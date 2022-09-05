@@ -10,9 +10,19 @@ export default function Input(props) {
         return <input className="form-input" {...props} />;
     }
   };
+
+  const hasLabel = label => {
+    switch (label) {
+      case undefined:
+        return "no-label";
+      default:
+        return "";
+    }
+  };
+
   return (
     <>
-      <div className="form-field">
+      <div className={`form-field ${hasLabel(props.label)}`}>
         <label htmlFor={props.id}>{props.label}</label>
         {inputType(props.type)}
       </div>

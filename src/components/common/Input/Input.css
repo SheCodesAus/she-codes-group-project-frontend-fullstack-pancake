@@ -4,7 +4,9 @@
   gap: 0.5rem;
   width: 100%;
 }
-
+.no-label {
+  gap: 0;
+}
 .form-input,
 .form-textarea,
 .form-select {
