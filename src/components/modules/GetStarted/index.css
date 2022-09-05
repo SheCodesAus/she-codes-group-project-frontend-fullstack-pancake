@@ -1,0 +1,40 @@
+.auth-form-container {
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  max-width: 480px;
+  background: var(--white);
+  border-radius: var(--borderRadius-medium);
+  box-shadow: var(--shadow-2);
+  padding: 4rem 2.5rem;
+  margin: 3rem auto;
+  transition: var(--transition);
+}
+.auth-form-container:hover {
+  box-shadow: var(--shadow-4);
+}
+
+.auth-title {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.auth-question {
+  margin-top: 0.75rem;
+  text-align: center;
+}
+.member-btn {
+  color: var(--primary-400);
+  cursor: pointer;
+}
+
+.submit-message {
+  margin-top: 0.5rem;
+}
+
+.success {
+  color: var(--alert-success);
+}
+
+.fail {
+  color: var(--alert-danger);
+}

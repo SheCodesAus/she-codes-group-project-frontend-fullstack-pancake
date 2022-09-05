@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
+import Input from "../../../common/Input";
 import CTAButton from "../../../common/CTAButton";
+import "./SearchBar.css";
 
 export default function SearchBar({ data, setFilteredData }) {
   const [searchTerm, setSearchTerm] = useState("");
@@ -19,12 +21,11 @@ export default function SearchBar({ data, setFilteredData }) {
       return "";
     });
     setFilteredData(newData);
-    console.log("newData: ", newData);
   }, [searchTermToEnter]);
 
   return (
-    <>
-      <input
+    <div className="search-bar">
+      <Input
         type="text"
         placeholder="Search..."
         onChange={event => {
@@ -32,15 +33,19 @@ export default function SearchBar({ data, setFilteredData }) {
             ? setSearchTerm(event.target.value)
             : setSearchTermToEnter("");
         }}
+        onKeyDown={event => {
+          if (event.key === "Enter") {
+            setSearchTermToEnter(searchTerm);
+          }
+        }}
       />
       <CTAButton
-        variant="primary"
         onClick={() => {
           setSearchTermToEnter(searchTerm);
         }}
       >
         Search
       </CTAButton>
-    </>
+    </div>
   );
 }

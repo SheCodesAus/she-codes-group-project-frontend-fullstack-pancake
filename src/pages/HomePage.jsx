@@ -4,7 +4,6 @@ import TwoColumn from "../components/common/TwoColumn";
 import Slider from "../components/modules/Home/Slider";
 import Placeholder from "../assets/images/placeholder.svg";
 import { mockWorkshopsData } from "../mock/workshopsData";
-import Grid from "../components/common/Grid";
 
 export default function HomePage() {
   return (
@@ -34,9 +33,6 @@ export default function HomePage() {
           image={Placeholder}
           link="/about-us"
         />
-      </Container>
-      <Container>
-        <Grid />
       </Container>
     </>
   );
