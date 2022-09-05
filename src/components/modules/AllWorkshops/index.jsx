@@ -1,8 +1,8 @@
 import React, { useState } from "react";
+import Grid from "../../common/Grid";
 import FilteredList from "./FilteredList";
 import SearchBar from "./SearchBar";
 import "./index.css";
-import Grid from "../../common/Grid";
 
 export default function AllWorkshops({ data }) {
   const [filteredData, setFilteredData] = useState(data);
