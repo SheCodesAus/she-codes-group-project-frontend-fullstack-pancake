@@ -30,10 +30,10 @@ export default function Footer() {
                 </>
               ) : (
                 <>
-                  <p className="nav-section-title">Start Exploring</p>
+                  <p className="nav-section-title">Welcome</p>
                   <div className="nav-section-menu">
-                    <Link to={`/profile/${userId}`}>Profile</Link>
-                    <Link to="/create-project">Create Project</Link>
+                    <Link to={`/profile/${userId}`}>View Profile</Link>
+                    <Link to="/create-project">Post Workshop</Link>
                     <p
                       onClick={() => {
                         localStorage.clear();

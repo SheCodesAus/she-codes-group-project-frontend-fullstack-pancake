@@ -7,20 +7,20 @@
   width: 1.5rem;
 }
 .level-easy {
-  background-color: #83c5be;
+  background-color: var(--primary-200);
   border-radius: 99px 0 0 99px;
 }
 .level-middle {
-  background-color: #e29578;
+  background-color: var(--secondary-medium);
 }
 .level-advanced {
-  background-color: #135159;
+  background-color: var(--primary-700);
   border-radius: 0 99px 99px 0;
 }
 .level-selected {
   height: 1.5rem;
   width: 1.5rem;
-  border-radius: 99px;
+  border-radius: var(--borderRadius-round);
   border: 3px solid #fff;
   z-index: 999;
 }
