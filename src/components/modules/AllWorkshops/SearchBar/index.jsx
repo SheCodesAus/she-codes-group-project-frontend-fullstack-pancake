@@ -39,7 +39,7 @@ export default function SearchBar({ data, setFilteredData }) {
         }}
       />
       <button
-        className="primary"
+        className="button-primary"
         onClick={() => {
           setSearchTermToEnter(searchTerm);
         }}

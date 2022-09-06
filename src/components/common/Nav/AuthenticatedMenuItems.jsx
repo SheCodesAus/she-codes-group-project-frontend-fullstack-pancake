@@ -19,10 +19,10 @@ export default function AuthenticatedMenuItems({ navUsername, userId }) {
       </Link>
       <div className="dynamic_menu_butons">
         <Link to="/create-workshop">
-          <button className="primary">Create Workshop</button>
+          <button className="button-primary">Create Workshop</button>
         </Link>
         <button
-          className="secondary"
+          className="button-secondary"
           onClick={() => {
             localStorage.clear();
             navigate("/");

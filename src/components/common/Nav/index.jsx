@@ -36,7 +36,7 @@ export default function Nav() {
           {!loginStatus ? (
             <div className="dynamic_menu_items">
               <Link to="/get-started">
-                <button className="primary">Get Started</button>
+                <button className="button-primary">Get Started</button>
               </Link>
             </div>
           ) : (

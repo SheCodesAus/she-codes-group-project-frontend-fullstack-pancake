@@ -131,16 +131,16 @@ button:hover {
   box-shadow: var(--shadow-3);
 }
 
-button .primary {
+.button-primary {
   background-color: var(--primary-300);
   color: #fff;
 }
 
-button .secondary {
+.button-secondary {
   background-color: #fff;
   color: var(--primary-300);
 }
 
-button .full {
+.full {
   width: 100%;
 }

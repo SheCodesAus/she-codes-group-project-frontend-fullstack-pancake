@@ -18,7 +18,7 @@ export default function TwoColumn({
         <h2>{heading}</h2>
         <p>{paragraph}</p>
         <Link to={link}>
-          <button className="primary">{button}</button>
+          <button className="button-primary">{button}</button>
         </Link>
       </div>
       <div className="columnImage">

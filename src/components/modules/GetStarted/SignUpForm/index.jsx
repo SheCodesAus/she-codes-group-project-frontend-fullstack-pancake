@@ -83,7 +83,7 @@ export default function SignUpForm({
           />
         );
       })}
-      <button type="submit" className="primary full">
+      <button type="submit" className="button-primary full">
         Sign up
       </button>
       {loading && <Loading />}

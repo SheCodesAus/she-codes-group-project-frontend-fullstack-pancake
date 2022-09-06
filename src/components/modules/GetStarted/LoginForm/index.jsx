@@ -76,7 +76,7 @@ export default function LoginForm({ setSubmitMessage, setSubmitSuccess }) {
           />
         );
       })}
-      <button type="submit" className="primary full">
+      <button type="submit" className="button-primary full">
         Login
       </button>
       {loading && <Loading />}
