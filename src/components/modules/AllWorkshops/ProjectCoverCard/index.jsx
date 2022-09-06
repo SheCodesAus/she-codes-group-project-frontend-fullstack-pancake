@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import SkillLevel from "../../../common/SkillLevel";
 import SkillTag from "../../../common/SkillTag";
-import { useErrorImage } from "../../../../services/error/useErrorImage";
+import { useErrorImage } from "../../../../utilities/error/useErrorImage";
 import "./ProjectCoverCard.css";
 
 export default function ProjectCoverCard({
