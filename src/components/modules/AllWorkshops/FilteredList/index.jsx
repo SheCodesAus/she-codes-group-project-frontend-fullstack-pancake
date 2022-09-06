@@ -3,7 +3,7 @@ import ProjectCoverCard from "../ProjectCoverCard";
 import { getUserById } from "../../../../services/users/getUserById";
 
 export default function FilteredList({ filteredData }) {
-  const [orgniserName, setOrgniserName] = useState("");
+  const [organiserName, setOrganiserName] = useState("");
   return filteredData.map((workshop, index) => {
     const {
       id,
@@ -17,19 +17,19 @@ export default function FilteredList({ filteredData }) {
 
     getUserById(organiser).then(data => {
       const { username } = data;
-      setOrgniserName(username);
+      setOrganiserName(username);
     });
 
     return (
       <ProjectCoverCard
         id={id}
         key={index}
-        orgniserName={orgniserName}
+        organiserName={organiserName}
         image={image}
         workshopTitle={title}
-        date_and_time={date_and_time}
-        is_online={is_online}
-        is_in_person={is_in_person}
+        dateAndTime={date_and_time}
+        isOnline={is_online}
+        isInPerson={is_in_person}
       />
     );
   });

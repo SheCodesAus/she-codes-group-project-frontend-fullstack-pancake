@@ -8,12 +8,23 @@ import "./ProjectCoverCard.css";
 export default function ProjectCoverCard({
   id,
   image,
-  orgniserName,
+  organiserName,
   workshopTitle,
-  date_and_time,
-  is_online,
-  is_in_person,
+  dateAndTime,
+  isOnline,
+  isInPerson,
 }) {
+  const switchDeliveryMode = (isOnline, isInPerson) => {
+    if (isOnline && !isInPerson) {
+      return "Online";
+    }
+    if (!isOnline && isInPerson) {
+      return "In Person";
+    }
+    if (isOnline && isInPerson) {
+      return "Online & In Person";
+    }
+  };
   return (
     <Link to={`/workshop/${id}`}>
       <div className="project-card-container">
@@ -23,19 +34,11 @@ export default function ProjectCoverCard({
         <div className="project-card-text">
           <div className="text-row title-row">
             <span>{workshopTitle}</span>
-            <span>{orgniserName}</span>
+            <span>{organiserName}</span>
           </div>
           <div className="text-row">
-            <span>
-              {is_online && !is_in_person
-                ? "Online"
-                : is_in_person && !is_online
-                ? "In Person"
-                : is_online && is_in_person
-                ? "Online & In Person"
-                : ""}
-            </span>
-            <span>{new Date(date_and_time).toLocaleDateString()}</span>
+            <span>{switchDeliveryMode(isOnline, isInPerson)}</span>
+            <span>{new Date(dateAndTime).toLocaleDateString()}</span>
           </div>
           {/* here will be a line of skills level and the languages, will update once backen data field is ready */}
           {/* <div className="text-row">
