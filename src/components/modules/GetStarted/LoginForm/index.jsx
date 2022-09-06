@@ -40,7 +40,6 @@ export default function LoginForm({ setSubmitMessage, setSubmitSuccess }) {
             window.localStorage.setItem("login", true);
             navigate("/");
             setLoading(false);
-            window.location.reload();
           } else {
             const { non_field_errors } = data;
             setSubmitMessage(non_field_errors[0]);
