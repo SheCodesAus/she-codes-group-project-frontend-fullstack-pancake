@@ -1,19 +1,22 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import SkillLevel from "../../../common/SkillLevel";
 import SkillTag from "../../../common/SkillTag";
 import { useErrorImage } from "../../../../utilities/error/useErrorImage";
+import { getUserById } from "../../../../services/users/getUserById";
 import "./ProjectCoverCard.css";
 
 export default function ProjectCoverCard({
   id,
   image,
-  organiserName,
+  organiserId,
   workshopTitle,
   dateAndTime,
   isOnline,
   isInPerson,
 }) {
+  const [organiserName, setOrganiserName] = useState("");
+  const [loading, setLoading] = useState(true);
   const switchDeliveryMode = (isOnline, isInPerson) => {
     if (isOnline && !isInPerson) {
       return "Online";
@@ -25,6 +28,15 @@ export default function ProjectCoverCard({
       return "Online & In Person";
     }
   };
+
+  useEffect(() => {
+    getUserById(organiserId).then(data => {
+      const { username } = data;
+      setOrganiserName(username);
+      setLoading(false);
+    });
+  }, []);
+
   return (
     <Link to={`/workshop/${id}`}>
       <div className="project-card-container">
@@ -34,7 +46,7 @@ export default function ProjectCoverCard({
         <div className="project-card-text">
           <div className="text-row title-row">
             <span>{workshopTitle}</span>
-            <span>{organiserName}</span>
+            <span>{loading ? "fetching..." : organiserName}</span>
           </div>
           <div className="text-row">
             <span>{switchDeliveryMode(isOnline, isInPerson)}</span>
