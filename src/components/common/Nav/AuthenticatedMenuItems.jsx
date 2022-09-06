@@ -4,6 +4,11 @@ import { Link, useNavigate } from "react-router-dom";
 export default function AuthenticatedMenuItems({ navUsername, userId }) {
   const navigate = useNavigate();
 
+  const handleLogOut = () => {
+    window.localStorage.clear();
+    navigate("/");
+  };
+
   return (
     <div className="dynamic_menu_items">
       <Link to={`/profile/${userId}`}>
@@ -21,14 +26,7 @@ export default function AuthenticatedMenuItems({ navUsername, userId }) {
         <Link to="/create-workshop">
           <button className="button-primary">Create Workshop</button>
         </Link>
-        <button
-          className="button-secondary"
-          onClick={() => {
-            localStorage.clear();
-            navigate("/");
-            window.location.reload();
-          }}
-        >
+        <button className="button-secondary" onClick={handleLogOut}>
           Log out
         </button>
       </div>
