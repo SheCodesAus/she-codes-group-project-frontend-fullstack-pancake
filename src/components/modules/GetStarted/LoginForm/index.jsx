@@ -29,7 +29,6 @@ export default function LoginForm({ setSubmitMessage, setSubmitSuccess }) {
 
   const handleSubmit = async event => {
     event.preventDefault();
-    console.log("Loggin in with credentials: ", credentials);
     if (credentials.username && credentials.password) {
       setLoading(true);
       login(credentials)
