@@ -3,7 +3,7 @@ import Grid from "../../common/Grid";
 import FilteredList from "./FilteredList";
 import SearchBar from "./SearchBar";
 import "./index.css";
-import Sort from "./Sort";
+import SortDropdown from "./SortDropdown";
 
 export default function AllWorkshops({ data }) {
   const [filteredData, setFilteredData] = useState(data);
@@ -11,7 +11,7 @@ export default function AllWorkshops({ data }) {
   return (
     <>
       <div className="search-filter-sort-container">
-        <Sort
+        <SortDropdown
           data={data}
           filteredData={filteredData}
           setFilteredData={setFilteredData}
