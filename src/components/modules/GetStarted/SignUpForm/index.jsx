@@ -38,7 +38,6 @@ export default function SignUpForm({
 
   const handleSubmit = async event => {
     event.preventDefault();
-    console.log("Signup with credentials: ", credentials);
     if (credentials.username && credentials.email && credentials.password) {
       setLoading(true);
       signup(credentials)
