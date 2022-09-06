@@ -5,7 +5,7 @@ import "./twocolumn.css";
 export default function TwoColumn({
   heading,
   paragraph,
-  button,
+  buttonText,
   image,
   link,
   direction,
@@ -18,7 +18,7 @@ export default function TwoColumn({
         <h2>{heading}</h2>
         <p>{paragraph}</p>
         <Link to={link}>
-          <button className="button-primary">{button}</button>
+          <button className="button-primary">{buttonText}</button>
         </Link>
       </div>
       <div className="columnImage">
