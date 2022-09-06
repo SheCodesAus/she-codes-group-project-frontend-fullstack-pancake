@@ -19,7 +19,6 @@ const selectTagColor = children => {
   return "";
 };
 export default function SkillTag({ children }) {
-  console.log("tag children: ", children);
   return (
     <span className={`SkillTag ${selectTagColor(children.toLowerCase())}`}>
       {children}

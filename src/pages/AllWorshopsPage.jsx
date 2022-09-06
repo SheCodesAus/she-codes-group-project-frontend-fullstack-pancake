@@ -1,29 +1,28 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import Loading from "../components/common/Loading";
 import Banner from "../components/common/Banner";
 import Container from "../components/common/Container";
-import ProjectCoverCard from "../components/ProjectCoverCard";
-import { mockWorkshopsData } from "../mock/workshopsData";
+import AllWorkshops from "../components/modules/AllWorkshops";
+import { getAllWorkshops } from "../services/workshops/getAllWorkshops";
 
 export default function AllWorkshopsPage() {
+  const [allWorkshopsData, setAllWorkshopsData] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    getAllWorkshops().then(data => {
+      setAllWorkshopsData(data);
+      setLoading(false);
+    });
+  }, []);
+
   return (
     <>
       <Container wrapperVariant="banner">
         <Banner>Explore Workshops</Banner>
       </Container>
       <Container>
-        {mockWorkshopsData.map((workshop, index) => {
-          return (
-            <ProjectCoverCard
-              key={index}
-              image={workshop.image}
-              workshoptitle={workshop.title}
-              languages={workshop.languages}
-              deliverymethod={workshop.location}
-              difficulty={workshop.difficulty_level}
-              link="/"
-            />
-          );
-        })}
+        {loading ? <Loading /> : <AllWorkshops data={allWorkshopsData} />}
       </Container>
     </>
   );

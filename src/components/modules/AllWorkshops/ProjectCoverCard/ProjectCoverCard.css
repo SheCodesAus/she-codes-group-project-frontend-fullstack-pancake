@@ -1,0 +1,45 @@
+.project-card-container {
+  border-radius: var(--borderRadius-medium);
+  box-shadow: var(--shadow-1);
+  transition: var(--transition);
+  width: 100%;
+}
+.project-card-container:hover {
+  box-shadow: var(--shadow-3);
+}
+
+.project-card-image {
+  border-radius: var(--borderRadius-medium-top);
+  width: 100%;
+  height: 40vh;
+  overflow: hidden;
+}
+
+.project-card-image img {
+  width: 100%;
+  height: 40vh;
+  object-fit: cover;
+}
+
+.project-card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--white);
+  border-radius: var(--borderRadius-medium-bottom);
+}
+
+.text-row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title-row span {
+  color: var(--primary-700);
+  font-weight: 700;
+}

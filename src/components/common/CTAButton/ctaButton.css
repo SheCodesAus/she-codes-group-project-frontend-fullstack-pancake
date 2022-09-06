@@ -3,20 +3,24 @@
   text-transform: capitalize;
   width: fit-content;
   padding: 0.65rem 1.25rem;
-  border: 1px solid #55b0ab;
-  border-radius: 10px;
-  transition: all 0.5s;
+  border: 1px solid var(--primary-300);
+  border-radius: var(--borderRadius-small);
+  transition: var(--transition);
 }
 .cta-button:hover {
-  box-shadow: 2px 2px 2px #1f1f1f41;
+  box-shadow: var(--shadow-3);
 }
 
 .primary {
-  background-color: #55b0ab;
+  background-color: var(--primary-300);
   color: #fff;
 }
 
 .secondary {
   background-color: #fff;
-  color: #55b0ab;
+  color: var(--primary-300);
+}
+
+.full {
+  width: 100%;
 }

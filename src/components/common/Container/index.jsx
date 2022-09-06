@@ -7,6 +7,8 @@ const selectContainerBg = containerBg => {
       return "bg-light";
     case "bg-dark":
       return "bg-dark";
+    case "bg-primary":
+      return "bg-primary";
     default:
       return "";
   }
@@ -19,6 +21,8 @@ const selectWrapperVariant = wrapperVariant => {
       return "footer";
     case "banner":
       return "banner";
+    case "auth":
+      return "auth";
     default:
       return "section";
   }

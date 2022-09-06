@@ -11,39 +11,43 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
-  /* display: flex;
-  flex-direction: row;
-  align-items: center; */
   gap: 1.5rem;
   width: 100%;
 }
+
 .static_menu_items {
   display: flex;
   gap: 1.5rem;
-  margin-right: auto;
+  align-items: center;
 }
-.menu_item_home {
-  transition: all 0.5s;
+.menu_item {
+  transition: var(--transition);
 }
-.menu_item_home:hover {
-  color: #55b0ab;
+.menu_item:hover {
+  color: var(--primary-300);
 }
 
-.menu_item_auth_group {
+.dynamic_menu_items {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1.5rem;
   margin-left: auto;
 }
-
-.nav-authenticated {
+.dynamic_menu_butons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+.dynamic_menu_user {
   display: flex;
   align-items: center;
   gap: 0.25rem;
 }
 .nav-avatar-image {
-  border-radius: 999px;
+  border-radius: var(--borderRadius-round);
   height: 2rem;
   width: 2rem;
   object-fit: cover;
