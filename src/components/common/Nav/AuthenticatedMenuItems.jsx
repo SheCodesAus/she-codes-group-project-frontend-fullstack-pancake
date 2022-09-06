@@ -1,6 +1,5 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-import CTAButton from "../CTAButton";
 
 export default function AuthenticatedMenuItems({ navUsername, userId }) {
   const navigate = useNavigate();
@@ -20,10 +19,10 @@ export default function AuthenticatedMenuItems({ navUsername, userId }) {
       </Link>
       <div className="dynamic_menu_butons">
         <Link to="/create-workshop">
-          <CTAButton>Create Workshop</CTAButton>
+          <button className="primary">Create Workshop</button>
         </Link>
-        <CTAButton
-          color="secondary"
+        <button
+          className="secondary"
           onClick={() => {
             localStorage.clear();
             navigate("/");
@@ -31,7 +30,7 @@ export default function AuthenticatedMenuItems({ navUsername, userId }) {
           }}
         >
           Log out
-        </CTAButton>
+        </button>
       </div>
     </div>
   );

@@ -116,3 +116,31 @@ form {
   max-width: 640px;
   align-items: center;
 }
+
+button {
+  cursor: pointer;
+  text-transform: capitalize;
+  width: fit-content;
+  padding: 0.65rem 1.25rem;
+  border: 1px solid var(--primary-300);
+  border-radius: var(--borderRadius-small);
+  transition: var(--transition);
+}
+
+button:hover {
+  box-shadow: var(--shadow-3);
+}
+
+button .primary {
+  background-color: var(--primary-300);
+  color: #fff;
+}
+
+button .secondary {
+  background-color: #fff;
+  color: var(--primary-300);
+}
+
+button .full {
+  width: 100%;
+}

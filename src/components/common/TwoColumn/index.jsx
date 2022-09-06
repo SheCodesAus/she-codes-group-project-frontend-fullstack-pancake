@@ -1,5 +1,4 @@
 import React from "react";
-import CTAButton from "../CTAButton";
 import { Link } from "react-router-dom";
 import "./twocolumn.css";
 
@@ -19,7 +18,7 @@ export default function TwoColumn({
         <h2>{heading}</h2>
         <p>{paragraph}</p>
         <Link to={link}>
-          <CTAButton>{button}</CTAButton>
+          <button className="primary">{button}</button>
         </Link>
       </div>
       <div className="columnImage">

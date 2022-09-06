@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Input from "../../../common/Input";
-import CTAButton from "../../../common/CTAButton";
 import Loading from "../../../common/Loading";
 import { signup } from "../../../../services/auth/signup";
 
@@ -84,9 +83,9 @@ export default function SignUpForm({
           />
         );
       })}
-      <CTAButton type="submit" width="full">
+      <button type="submit" className="primary full">
         Sign up
-      </CTAButton>
+      </button>
       {loading && <Loading />}
     </form>
   );

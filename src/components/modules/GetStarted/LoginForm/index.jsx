@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Input from "../../../common/Input";
-import CTAButton from "../../../common/CTAButton";
 import Loading from "../../../common/Loading";
 import { login } from "../../../../services/auth/login";
 
@@ -77,9 +76,9 @@ export default function LoginForm({ setSubmitMessage, setSubmitSuccess }) {
           />
         );
       })}
-      <CTAButton type="submit" width="full">
+      <button type="submit" className="primary full">
         Login
-      </CTAButton>
+      </button>
       {loading && <Loading />}
     </form>
   );
