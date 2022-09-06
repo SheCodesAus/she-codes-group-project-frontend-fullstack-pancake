@@ -1,0 +1,25 @@
+.form {
+  border-color: red;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* border-color: green;
+  border-width: 3rem; */
+  width: 50%;
+  position: ;
+}
+
+.label {
+  font-size: 8pt;
+  padding: 1%;
+}
+
+.input {
+  /* width: 50%; */
+  font-size: 8pt;
+  border-radius: 25px;
+  border-color: grey;
+}
