@@ -4,3 +4,19 @@
   flex-grow: 1;
   min-height: 100vh;
 }
+
+.nav-drawer {
+  display: block;
+}
+.nav-full {
+  display: none;
+}
+
+@media screen and (min-width: 850px) {
+  .nav-drawer {
+    display: none;
+  }
+  .nav-full {
+    display: block;
+  }
+}
