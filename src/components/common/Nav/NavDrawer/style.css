@@ -1,0 +1,28 @@
+.header-logo-small {
+  width: 95px;
+}
+.hamburg-menu {
+  height: 10px;
+  z-index: 999;
+}
+.nav-drawer-menu-items-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 5rem 2.5rem;
+  background-color: var(--primary-100);
+  height: 100vh;
+  width: 50vw;
+  box-shadow: var(--shadow-3);
+}
+
+.show-sidebar {
+  display: flex;
+}
+
+.hide-sidebar {
+  display: none;
+}
