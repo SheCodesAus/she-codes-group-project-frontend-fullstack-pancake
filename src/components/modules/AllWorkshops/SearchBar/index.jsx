@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Input from "../../../common/Input";
-import "./SearchBar.css";
+import "./style.css";
 
 export default function SearchBar({ data, setFilteredData }) {
   const [searchTerm, setSearchTerm] = useState("");
