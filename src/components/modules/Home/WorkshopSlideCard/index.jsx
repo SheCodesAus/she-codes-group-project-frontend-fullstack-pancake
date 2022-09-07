@@ -1,7 +1,7 @@
 import { useErrorImage } from "../../../../utilities/error/useErrorImage";
-import "./LatestWorkshopSlideCard.css";
+import "./style.css";
 
-export default function LatestWorkshopSlideCard({ slide }) {
+export default function WorkshopSlideCard({ slide }) {
   const { title, description, image, date_and_time } = slide;
   return (
     <div className="latest-workshop-slide-card">

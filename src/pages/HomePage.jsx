@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Container from "../components/common/Container";
 import TwoColumn from "../components/common/TwoColumn";
-import Slider from "../components/modules/Home/Slider";
+import Carousel from "../components/modules/Home/Carousel";
 import Loading from "../components/common/Loading";
 import Placeholder from "../assets/images/placeholder.svg";
 import { getAllWorkshops } from "../services/workshops/getAllWorkshops";
@@ -39,7 +39,7 @@ export default function HomePage() {
         {loading ? (
           <Loading />
         ) : (
-          <Slider
+          <Carousel
             title="Latest Workshops"
             subTitle="Have a quick look into what's happening at the moment..."
             slides={latestWorkshopsData}

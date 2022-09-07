@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import LatestWorkshopSlideCard from "./LatestWorkshopSlideCard";
-import "./index.css";
+import WorkshopSlideCard from "../WorkshopSlideCard";
+import "./style.css";
 
-export default function LatestWorkshopSlider({ title, subTitle, slides }) {
+export default function Carousel({ title, subTitle, slides }) {
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
 
   return (
@@ -23,7 +23,7 @@ export default function LatestWorkshopSlider({ title, subTitle, slides }) {
           {/* this is to show a symbol of <<  to indicate this is a button functioning as `go to previous slide`. This will be updated later to an icon, just want to check if we're allowed to use an Icon library before I install it */}
           &#8810;
         </span>
-        <LatestWorkshopSlideCard slide={slides[currentSlideIndex]} />
+        <WorkshopSlideCard slide={slides[currentSlideIndex]} />
         <span
           className="slide-control"
           onClick={() => {
