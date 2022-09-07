@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Input from "../../../common/Input";
-import CTAButton from "../../../common/CTAButton";
 import Loading from "../../../common/Loading";
 import { login } from "../../../../services/auth/login";
 
@@ -30,7 +29,6 @@ export default function LoginForm({ setSubmitMessage, setSubmitSuccess }) {
 
   const handleSubmit = async event => {
     event.preventDefault();
-    console.log("Loggin in with credentials: ", credentials);
     if (credentials.username && credentials.password) {
       setLoading(true);
       login(credentials)
@@ -42,7 +40,6 @@ export default function LoginForm({ setSubmitMessage, setSubmitSuccess }) {
             window.localStorage.setItem("login", true);
             navigate("/");
             setLoading(false);
-            window.location.reload();
           } else {
             const { non_field_errors } = data;
             setSubmitMessage(non_field_errors[0]);
@@ -77,9 +74,9 @@ export default function LoginForm({ setSubmitMessage, setSubmitSuccess }) {
           />
         );
       })}
-      <CTAButton type="submit" width="full">
+      <button type="submit" className="button-primary full">
         Login
-      </CTAButton>
+      </button>
       {loading && <Loading />}
     </form>
   );

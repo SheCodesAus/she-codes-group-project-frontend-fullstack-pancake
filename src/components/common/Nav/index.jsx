@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Container from "../Container";
-import CTAButton from "../CTAButton";
 import Logo from "../../../assets/logo/logo-vertical-color.svg";
 import StaticMenuItems from "./StaticMenuItems";
 import { getUserById } from "../../../services/users/getUserById";
@@ -37,7 +36,7 @@ export default function Nav() {
           {!loginStatus ? (
             <div className="dynamic_menu_items">
               <Link to="/get-started">
-                <CTAButton>Get Started</CTAButton>
+                <button className="button-primary">Get Started</button>
               </Link>
             </div>
           ) : (

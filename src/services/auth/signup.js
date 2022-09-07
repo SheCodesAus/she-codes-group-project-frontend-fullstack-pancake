@@ -10,6 +10,5 @@ const postUser = async credentials => {
 };
 
 export const signup = async credentials => {
-  const data = await postUser(credentials);
-  return data;
+  return postUser(credentials);
 };
