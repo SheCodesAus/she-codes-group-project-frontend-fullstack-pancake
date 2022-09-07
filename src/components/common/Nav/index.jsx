@@ -3,9 +3,9 @@ import { Link, useLocation } from "react-router-dom";
 import Container from "../Container";
 import Logo from "../../../assets/logo/logo-vertical-color.svg";
 import StaticMenuItems from "./StaticMenuItems";
-import { getUserById } from "../../../services/users/getUserById";
-import "./nav.css";
 import AuthenticatedMenuItems from "./AuthenticatedMenuItems";
+import { getUserById } from "../../../services/users/getUserById";
+import "./style.css";
 
 export default function Nav() {
   const path = useLocation().pathname;
