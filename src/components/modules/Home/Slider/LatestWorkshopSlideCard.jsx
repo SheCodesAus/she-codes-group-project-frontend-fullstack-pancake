@@ -1,23 +1,25 @@
-import SkillLevel from "../../../common/SkillLevel";
+import { useErrorImage } from "../../../../utilities/error/useErrorImage";
 import "./LatestWorkshopSlideCard.css";
 
 export default function LatestWorkshopSlideCard({ slide }) {
+  const { title, description, image, date_and_time } = slide;
   return (
     <div className="latest-workshop-slide-card">
       <div className="latest-workshop-slide-card-image">
-        <img src={slide.image} alt={slide.title} />
+        <img src={image} alt={title} onError={useErrorImage} />
       </div>
       <div className="latest-workshop-slide-card-text">
         <div className="latest-workshop-slide-card-text-row">
-          <h3>{slide.title}</h3>
-          <p>{slide.date_created}</p>
+          <h3>{title}</h3>
+          <p>{new Date(date_and_time).toLocaleDateString()}</p>
         </div>
-        <div className="latest-workshop-slide-card-text-row">
+        {/* this is commented out as the Api fields are not ready yet */}
+        {/* <div className="latest-workshop-slide-card-text-row">
           <SkillLevel level={slide.difficulty_level} />
           <span>{slide.location}</span>
-        </div>
+        </div> */}
       </div>
-      <p className="latest-workshop-slide-card-p">{slide.description}</p>
+      <p className="latest-workshop-slide-card-p">{description}</p>
     </div>
   );
 }
