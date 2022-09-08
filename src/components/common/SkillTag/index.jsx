@@ -1,5 +1,5 @@
 import React from "react";
-import "./skillTag.css";
+import "./style.css";
 
 const selectTagColor = children => {
   if (

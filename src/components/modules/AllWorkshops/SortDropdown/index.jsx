@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Input from "../../../common/Input";
 
-export default function Sort({ data, setFilteredData }) {
+export default function SortDropdown({ data, setFilteredData }) {
   const [sortType, setSortType] = useState("");
 
   useEffect(() => {

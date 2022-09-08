@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Input from "../../../common/Input";
-import CTAButton from "../../../common/CTAButton";
 import Loading from "../../../common/Loading";
 import { signup } from "../../../../services/auth/signup";
 
@@ -39,7 +38,6 @@ export default function SignUpForm({
 
   const handleSubmit = async event => {
     event.preventDefault();
-    console.log("Signup with credentials: ", credentials);
     if (credentials.username && credentials.email && credentials.password) {
       setLoading(true);
       signup(credentials)
@@ -84,9 +82,9 @@ export default function SignUpForm({
           />
         );
       })}
-      <CTAButton type="submit" width="full">
+      <button type="submit" className="button-primary full">
         Sign up
-      </CTAButton>
+      </button>
       {loading && <Loading />}
     </form>
   );

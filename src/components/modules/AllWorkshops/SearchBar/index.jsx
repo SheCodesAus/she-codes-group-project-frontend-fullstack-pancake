@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Input from "../../../common/Input";
-import CTAButton from "../../../common/CTAButton";
-import "./SearchBar.css";
+import "./style.css";
 
 export default function SearchBar({ data, setFilteredData }) {
   const [searchTerm, setSearchTerm] = useState("");
@@ -39,13 +38,14 @@ export default function SearchBar({ data, setFilteredData }) {
           }
         }}
       />
-      <CTAButton
+      <button
+        className="button-primary"
         onClick={() => {
           setSearchTermToEnter(searchTerm);
         }}
       >
         Search
-      </CTAButton>
+      </button>
     </div>
   );
 }

@@ -4,6 +4,5 @@ const getUser = async id => {
 };
 
 export const getUserById = async id => {
-  const data = await getUser(id);
-  return data;
+  return getUser(id);
 };
