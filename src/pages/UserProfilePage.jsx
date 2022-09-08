@@ -7,19 +7,10 @@ export default function UserProfilePage() {
     return (
 <>
 <Container wrapperVariant="banner">
-        <Banner>Username</Banner>
-    </Container>
+    <Banner>Username</Banner></Container>
 
-    <Container>
-<Profile />
-    </Container>
+    <Container><Profile /></Container>
 </>
-   
         
-
-
-
-
-
     );
 }

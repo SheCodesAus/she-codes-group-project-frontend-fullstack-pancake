@@ -1,7 +1,12 @@
+import React from 'react'
 import "./index.css";
 
 export default function Profile(){
-    return
+    return (
+        <container>
+            <Profile/>
+            <div className="workshop-tile"></div>
 
-    <div className="Tiles"></div>
+        </container>
+    )
 }
