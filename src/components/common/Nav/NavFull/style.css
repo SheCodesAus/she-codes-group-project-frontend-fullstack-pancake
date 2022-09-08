@@ -14,38 +14,15 @@
   gap: 1.5rem;
   width: 100%;
 }
-
-.static_menu_items {
-  display: flex;
-  gap: 1.5rem;
-  align-items: center;
-}
 .menu_item {
+  color: var(--charcoal);
   transition: var(--transition);
 }
+
 .menu_item:hover {
   color: var(--primary-300);
 }
 
-.dynamic_menu_items {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 1.5rem;
-  margin-left: auto;
-}
-.dynamic_menu_butons {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 0.5rem;
-}
-.dynamic_menu_user {
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
-}
 .nav-avatar-image {
   border-radius: var(--borderRadius-round);
   height: 2rem;

@@ -1,0 +1,25 @@
+.dynamic_menu_items {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.dynamic_menu_buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+@media screen and (min-width: 850px) {
+  .dynamic_menu_items {
+    flex-direction: row;
+    align-items: center;
+    margin-left: auto;
+  }
+  .dynamic_menu_buttons {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.5rem;
+  }
+}

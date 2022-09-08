@@ -55,6 +55,7 @@
 
 * {
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 body {
   margin: 0;
@@ -137,7 +138,7 @@ button:hover {
 }
 
 .button-secondary {
-  background-color: #fff;
+  background-color: transparent;
   color: var(--primary-300);
 }
 
