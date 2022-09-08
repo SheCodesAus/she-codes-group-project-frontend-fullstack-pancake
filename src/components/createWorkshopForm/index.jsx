@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import Input from "../common/Input";
 
 export default function CreateWorkshopForm() {
-  const [input, setInput] = useState({
+  const [workshopInputDetails, setWorkshopInputDetails] = useState({
     title: "",
     description: "",
     workshop_link: "",
+    image: "",
+    date_and_time: "",
     is_online: "",
     is_in_person: "",
-    date_and_time: "",
-    image: "",
   });
 
   const createWorkshopFormInputFields = [
@@ -31,75 +31,53 @@ export default function CreateWorkshopForm() {
       label: "Workshop Link",
       placeholder: "Please provide a link to your workshop ...",
     },
-
-    // {
-    //   type: "select",
-
-    //   id: "is_online",
-    //   label: "Is this workshop online?",
-    // },
-
-    // {
-    //   type: "select",
-    //   id: "is_in_person",
-    //   label: "Is this workshop in person?",
-    // },
-
-    {
-      type: "date",
-      id: "date_and_time",
-      label: "Date and Time",
-    },
-
     {
       type: "text",
       id: "image",
       label: "Provide an image link for your workshop",
       placeholder: "Image Link ...",
     },
+    {
+      type: "date",
+      id: "date_and_time",
+      label: "Pick a date",
+    },
   ];
 
   const token = window.localStorage.getItem("token");
-  console.log("token: ", token);
-  const handleChange = (e) => {
-    const { id, value } = e.target;
-    setInput((prevInput) => ({
-      ...prevInput,
-      [id]: value,
-    }));
+  const handleChange = event => {
+    setWorkshopInputDetails({
+      ...workshopInputDetails,
+      [event.target.id]: event.target.value,
+    });
   };
 
-  const handleSubmit = async (e) => {
-    console.log("Input", input);
+  const handleSubmit = async e => {
     e.preventDefault();
-    // if (
-    //   input.title &&
-    //   input.date &&
-    //   input.delivery &&
-    //   input.description &&
-    //   input.difficulty &&
-    //   input.email &&
-    //   input.image &&
-    //   input.languages &&
-    //   input.link &&
-    //   input.location
-    // ) {
-    await fetch(`${process.env.REACT_APP_API_URL}/workshops/`, {
-      method: "POST",
-      headers: {
-        Authorization: `Token ${token}`,
-
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(input),
-    })
-      .then((response) => {
-        console.log("res: ", response);
-        return response.json();
+    if (
+      workshopInputDetails.title &&
+      workshopInputDetails.description &&
+      workshopInputDetails.workshop_link &&
+      workshopInputDetails.image &&
+      workshopInputDetails.date_and_time &&
+      workshopInputDetails.is_online &&
+      workshopInputDetails.is_in_person
+    ) {
+      await fetch(`${process.env.REACT_APP_API_URL}/workshops/`, {
+        method: "POST",
+        headers: {
+          Authorization: `Token ${token}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(workshopInputDetails),
       })
-      .then((data) => console.log("data: ", data))
-      .catch((err) => console.log("err: ", err));
-    // }
+        .then(response => {
+          console.log("create workshop res: ", response);
+          return response.json();
+        })
+        .then(data => console.log("create workshop res data: ", data))
+        .catch(err => console.log("create workshop err: ", err));
+    }
   };
 
   return (
@@ -117,7 +95,6 @@ export default function CreateWorkshopForm() {
           />
         );
       })}
-
       <Input
         id="is_in_person"
         type="select"
@@ -127,7 +104,6 @@ export default function CreateWorkshopForm() {
         <option>Yes</option>
         <option>No</option>
       </Input>
-
       <Input
         id="is_online"
         type="select"
@@ -137,8 +113,7 @@ export default function CreateWorkshopForm() {
         <option>Yes</option>
         <option>No</option>
       </Input>
-
-      <button variant="primary" onClick={handleSubmit}>
+      <button variant="primary" type="submit" className="button-primary full">
         Submit
       </button>
     </form>
