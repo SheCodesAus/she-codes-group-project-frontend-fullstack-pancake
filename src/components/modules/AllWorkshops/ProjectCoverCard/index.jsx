@@ -4,6 +4,7 @@ import SkillLevel from "../../../common/SkillLevel";
 import SkillTag from "../../../common/SkillTag";
 import { useErrorImage } from "../../../../utilities/error/useErrorImage";
 import { getUserById } from "../../../../services/users/getUserById";
+import { getDeliveryMethod } from "../../../../utilities/getDeliveryMethod";
 import "./style.css";
 
 export default function ProjectCoverCard({
@@ -17,17 +18,6 @@ export default function ProjectCoverCard({
 }) {
   const [organiserName, setOrganiserName] = useState("");
   const [loading, setLoading] = useState(true);
-  const switchDeliveryMode = (isOnline, isInPerson) => {
-    if (isOnline && !isInPerson) {
-      return "Online";
-    }
-    if (!isOnline && isInPerson) {
-      return "In Person";
-    }
-    if (isOnline && isInPerson) {
-      return "Online & In Person";
-    }
-  };
 
   useEffect(() => {
     getUserById(organiserId).then(data => {
@@ -49,7 +39,7 @@ export default function ProjectCoverCard({
             <span>{loading ? "fetching..." : organiserName}</span>
           </div>
           <div className="text-row">
-            <span>{switchDeliveryMode(isOnline, isInPerson)}</span>
+            <span>{getDeliveryMethod(isOnline, isInPerson)}</span>
             <span>{new Date(dateAndTime).toLocaleDateString()}</span>
           </div>
           {/* here will be a line of skills level and the languages, will update once backen data field is ready */}
