@@ -1,6 +1,7 @@
 .latest-workshop-slide-card {
   width: 70%;
   border-radius: var(--borderRadius-large);
+  box-shadow: var(--shadow-2);
   background-color: #fff;
 }
 

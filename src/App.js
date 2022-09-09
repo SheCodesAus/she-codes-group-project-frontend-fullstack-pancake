@@ -1,7 +1,8 @@
 import "./App.css";
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Nav from "./components/common/Nav";
+import Nav from "./components/common/Nav/NavFull";
+import NavDrawer from "./components/common/Nav/NavDrawer";
 import HomePage from "./pages/HomePage";
 import AboutUsPage from "./pages/AboutUsPage";
 import AllWorkshopsPage from "./pages/AllWorshopsPage";
@@ -15,6 +16,7 @@ function App() {
     <Router>
       <div id="App">
         <Nav />
+        <NavDrawer />
         <Routes>
           <Route exact path="/" element={<HomePage />} />
           <Route path="/about-us" element={<AboutUsPage />} />

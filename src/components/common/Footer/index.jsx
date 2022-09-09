@@ -2,7 +2,7 @@ import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Logo from "../../../assets/logo/logo-text-only-primary-light.svg";
 import Container from "../Container";
-import "./footer.css";
+import "./style.css";
 
 export default function Footer() {
   const navigate = useNavigate();

@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import Grid from "../../common/Grid";
 import FilteredList from "./FilteredList";
 import SearchBar from "./SearchBar";
-import "./index.css";
 import SortDropdown from "./SortDropdown";
+import "./style.css";
 
 export default function AllWorkshops({ data }) {
   const [filteredData, setFilteredData] = useState(data);

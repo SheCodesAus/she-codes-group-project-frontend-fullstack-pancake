@@ -4,7 +4,7 @@ import SkillLevel from "../../../common/SkillLevel";
 import SkillTag from "../../../common/SkillTag";
 import { useErrorImage } from "../../../../utilities/error/useErrorImage";
 import { getUserById } from "../../../../services/users/getUserById";
-import "./ProjectCoverCard.css";
+import "./style.css";
 
 export default function ProjectCoverCard({
   id,
