@@ -1,5 +1,29 @@
-/* .workshop-tile{
+.top-half{
+    margin:1rem;
+    padding: 2rem;
+    height:30rem;
+    width:40rem;
+}
+
+.user-icon{
+margin: 1rem;
+float: left;
 background-color: pink;
-height:50%;
-width:50%;
-} */
+height:12rem;
+width:12rem;
+border-radius: 50%;
+}
+
+.top-button{
+    width:30rem;
+
+}
+#top-button-1{
+margin: 1rem;
+}
+
+#top-button-2{
+    margin: 1rem;
+
+}
+

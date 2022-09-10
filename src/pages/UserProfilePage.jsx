@@ -1,15 +1,14 @@
 import React from "react";
 import Banner from "../components/common/Banner";
-import Container from "..src/components/common/Container/index";
-import Profile from "..src/modules/Profile/index";
+import Container from "../components/common/Container/";
+import Profile from "../components/modules/Profile/";
 
 export default function UserProfilePage() {
     return ( 
 <>
 
-<Container wrapperVariant="banner">
-    <Banner>Username</Banner></Container>
-<Profile/>
+
+<Container><Profile/></Container>
 </>
         
     );

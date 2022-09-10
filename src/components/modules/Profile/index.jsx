@@ -1,7 +1,7 @@
 import React from 'react'
 import "./index.css";
-import Container from "../components/common/Container";
-
+import Container from '../../common/Container'
+import Grid from '../../common/Grid'
 
 
 export default function Profile(){
@@ -9,11 +9,24 @@ export default function Profile(){
     <>
     
     <Container>
-        <Profile/>
-        <h2> hi</h2>
-        <div className='user-icon'></div>
-        <div className="workshop-tile"></div>
-            
+
+   
+    
+    <Grid>
+
+    <div className='top-half'>
+    <div className='user-icon'></div>
+
+    <div className="top-button">
+        <button id="top-button-1">Workshop Manage</button>
+        <button id="top-button-2">Profile Manage</button>
+    </div>
+    </div>
+
+    <div className="workshop-tile"></div>
+    <div className="workshop-tile"></div>
+    <div className="workshop-tile"></div>
+    </Grid>
 
     </Container>
     </>
