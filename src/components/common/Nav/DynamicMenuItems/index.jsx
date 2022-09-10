@@ -41,7 +41,7 @@ export default function DynamicMenuItems({
     if (loginStatus) {
       return (
         <div className="dynamic_menu_items">
-          <Link to={`/profile/${userId}`}>
+          <Link to={`/user-profile/${userId}`}>
             <div
               className="dynamic_menu_user menu_item"
               onClick={toggleSidebar}
