@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import Loading from "../../common/Loading";
-import Input from "../../common/Input";
-import { getUserById } from "../../../services/users/getUserById";
-import { updateProfileById } from "../../../services/users/updateUserById";
+import Loading from "../../../common/Loading";
+import Input from "../../../common/Input";
+import { getUserById } from "../../../../services/users/getUserById";
+import { updateProfileById } from "../../../../services/users/updateUserById";
 
 export default function UpdateUserProfileForm({ userId }) {
   const [loading, setLoading] = useState(true);
@@ -26,6 +26,30 @@ export default function UpdateUserProfileForm({ userId }) {
         id: "username",
         label: "Username",
         defaultValue: profileData["username"],
+      },
+      {
+        type: "email",
+        id: "email",
+        label: "Email",
+        defaultValue: profileData["email"],
+      },
+      {
+        type: "text",
+        id: "first_name",
+        label: "First Name",
+        defaultValue: profileData["first_name"],
+      },
+      {
+        type: "text",
+        id: "last_name",
+        label: "Last Name",
+        defaultValue: profileData["last_name"],
+      },
+      {
+        type: "text",
+        id: "profile_image",
+        label: "Put a link to your profile image",
+        defaultValue: profileData["profile_image"],
       },
     ];
   }

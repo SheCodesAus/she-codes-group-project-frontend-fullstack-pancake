@@ -131,6 +131,12 @@ button:hover {
   box-shadow: var(--shadow-3);
 }
 
+.button-group {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
 .button-primary {
   background-color: var(--primary-300);
   color: #fff;
@@ -139,6 +145,12 @@ button:hover {
 .button-secondary {
   background-color: transparent;
   color: var(--primary-300);
+}
+
+.button-danger {
+  background-color: var(--alert-danger);
+  color: var(--white);
+  border: var(--alert-danger);
 }
 
 .full {

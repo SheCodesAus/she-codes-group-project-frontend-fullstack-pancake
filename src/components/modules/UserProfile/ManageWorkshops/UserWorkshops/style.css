@@ -1,0 +1,31 @@
+.user-workshop-card {
+  width: 100%;
+  border-radius: var(--borderRadius-medium);
+  transition: var(--transition);
+}
+
+.user-workshop-card:hover {
+  box-shadow: var(--shadow-4);
+}
+
+.user-workshop-card-image {
+  width: 100%;
+  height: 35vh;
+  border-radius: var(--borderRadius-medium-top);
+}
+
+.user-workshop-card-image img {
+  width: 100%;
+  height: 35vh;
+  object-fit: cover;
+  border-radius: var(--borderRadius-medium-top);
+}
+
+.user-workshop-card-manage {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-radius: var(--borderRadius-medium-bottom);
+  box-shadow: var(--shadow-2);
+}

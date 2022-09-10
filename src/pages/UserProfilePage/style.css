@@ -1,0 +1,12 @@
+.user-banner {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.user-avatar {
+  width: 125px;
+  height: 125px;
+  object-fit: cover;
+  border-radius: 999px;
+}
