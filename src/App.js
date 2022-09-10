@@ -25,7 +25,7 @@ function App() {
           <Route path="/all-workshops" element={<AllWorkshopsPage />} />
           <Route path="/workshop/:id" element={<WorkshopDetailPage />} />
           <Route path="/create-workshop" element={<CreateWorkshopPage />} />
-          <Route path="/user-profile" element={<UserProfilePage />} />
+          <Route path="/user-profile/:id" element={<UserProfilePage />} />
         </Routes>
         <Footer />
       </div>
