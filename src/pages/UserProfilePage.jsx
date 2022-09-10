@@ -9,7 +9,7 @@ export default function UserProfilePage() {
     <>
       <Container wrapperVariant="banner">
         <Banner>
-          <img src={Avatar} alt="" />
+          <div id="user-banner"><img src={Avatar} alt="" /><h1>Username</h1></div>
         </Banner>
       </Container>
       <Container>
