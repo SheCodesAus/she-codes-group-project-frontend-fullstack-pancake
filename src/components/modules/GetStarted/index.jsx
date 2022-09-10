@@ -1,7 +1,7 @@
 import { useState } from "react";
 import LoginForm from "./LoginForm";
 import SignUpForm from "./SignUpForm";
-import "./index.css";
+import "./style.css";
 
 export default function GetStarted() {
   const [isMember, setIsMember] = useState(true);

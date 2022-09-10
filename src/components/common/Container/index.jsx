@@ -1,5 +1,5 @@
 import React from "react";
-import "./container.css";
+import "./style.css";
 
 const selectContainerBg = containerBg => {
   switch (containerBg) {

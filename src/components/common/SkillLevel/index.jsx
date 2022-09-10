@@ -1,5 +1,5 @@
 import React from "react";
-import "./SkillLevel.css";
+import "./style.css";
 
 export default function SkillLevel({ level }) {
   return (

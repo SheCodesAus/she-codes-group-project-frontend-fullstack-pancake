@@ -1,0 +1,13 @@
+.static_menu_items {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+@media screen and (min-width: 850px) {
+  .static_menu_items {
+    flex-direction: row;
+    align-items: center;
+  }
+}

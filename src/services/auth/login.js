@@ -13,6 +13,5 @@ const postUser = async credentials => {
 };
 
 export const login = async credentials => {
-  const data = await postUser(credentials);
-  return data;
+  return postUser(credentials);
 };
