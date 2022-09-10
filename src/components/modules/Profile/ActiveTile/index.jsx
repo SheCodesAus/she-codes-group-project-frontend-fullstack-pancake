@@ -2,6 +2,20 @@ import React from "react";
 import Placehoder from "../../../../assets/images/placeholder.svg"
 
 export default function ActiveTile() {
+  const token = window.localStorage.getItem('token')
+//   const handleDelete = async(token) => {
+//   const response = await fetch(`${process.env.REACT_APP_API_URL}/workshops/`, {
+//     method: "DELETE",
+//     headers: {
+//           Authorization: `Token ${token}`,
+//           "Content-Type": "application/json",
+//         },
+//         body: JSON.stringify(workshopDetails),
+//       });
+//       return response.json();
+// };
+
+
   return (
     <>
       <div className="tile tile-active">
@@ -15,3 +29,19 @@ export default function ActiveTile() {
     </>
   );
 }
+// const postWorkshop = async (token, workshopDetails) => {
+
+// const response = await fetch(`${process.env.REACT_APP_API_URL}/workshops/`, {
+//   method: "POST",
+//   headers: {
+//     Authorization: `Token ${token}`,
+//     "Content-Type": "application/json",
+//   },
+//   body: JSON.stringify(workshopDetails),
+// });
+// return response.json();
+// };
+
+// export const createWorkshop = async (token, workshopDetails) => {
+// return postWorkshop(token, workshopDetails);
+// };
