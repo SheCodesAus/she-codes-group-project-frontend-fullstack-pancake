@@ -15,8 +15,8 @@ export default function HomePage() {
       const latest = data
         .sort(
           (a, b) =>
-            new Date(b.date_and_time).getTime() -
-            new Date(a.date_and_time).getTime()
+            new Date(a.date_and_time).getTime() -
+            new Date(b.date_and_time).getTime()
         )
         .slice(0, 5);
       setLatestWorkshopsData(latest);
