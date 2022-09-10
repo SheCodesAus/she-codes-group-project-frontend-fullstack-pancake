@@ -8,7 +8,7 @@ import ActiveTile from "./ActiveTile";
 export default function Profile() {
     const [showComponent, setShowComponent] = useState("workshop")
   return (
-    <>
+    <div>
       <div className="button-group">
         <button className="button-primary" onClick={()=>{setShowComponent("workshop")}}>Workshop Manage</button>
         <button className="button-primary" onClick={()=>{setShowComponent("profile")}}>Profile Manage</button>
@@ -25,6 +25,6 @@ export default function Profile() {
         User profile
       </div>
 
-    </>
+    </div>
   );
 }
