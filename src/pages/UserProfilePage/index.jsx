@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import Loading from "../../components/common/Loading";
 import Container from "../../components/common/Container";
 import Banner from "../../components/common/Banner";
-import Profile from "../../components/modules/Profile";
+import UserProfile from "../../components/modules/UserProfile";
 import { getUserById } from "../../services/users/getUserById";
 import { useDefaultAvatar } from "../../utilities/error/useDefaultAvatar";
 import "./style.css";
@@ -42,7 +42,7 @@ export default function UserProfilePage() {
         </Banner>
       </Container>
       <Container>
-        <Profile userId={id} />
+        <UserProfile userId={id} />
       </Container>
     </>
   );
