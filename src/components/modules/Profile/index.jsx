@@ -1,34 +1,30 @@
-import React from 'react'
+import React, {useState} from "react";
 import "./index.css";
-import Container from '../../common/Container'
-import Grid from '../../common/Grid'
+import Grid from "../../common/Grid";
+import BlankTile from "./BlankTile";
+import PostTile from "./PostTile";
+import ActiveTile from "./ActiveTile";
 
-
-export default function Profile(){
-    return (
+export default function Profile() {
+    const [showComponent, setShowComponent] = useState("workshop")
+  return (
     <>
-    
-    <Container>
+      <div className="button-group">
+        <button className="button-primary" onClick={()=>{setShowComponent("workshop")}}>Workshop Manage</button>
+        <button className="button-primary" onClick={()=>{setShowComponent("profile")}}>Profile Manage</button>
+      </div>
+      <div className={`${showComponent === "workshop" ? "show-this" : "not-show"}`}>
+        <Grid>
+        <BlankTile/>
+        <PostTile />
+        <ActiveTile />
+        </Grid>
+        
+      </div>
+      <div className={`${showComponent === "profile" ? "show-this" : "not-show"}`}>
+        User profile
+      </div>
 
-   
-    
-    <Grid>
-
-    <div className='top-half'>
-    <div className='user-icon'></div>
-
-    <div className="top-button">
-        <button id="top-button-1">Workshop Manage</button>
-        <button id="top-button-2">Profile Manage</button>
-    </div>
-    </div>
-
-    <div className="workshop-tile"></div>
-    <div className="workshop-tile"></div>
-    <div className="workshop-tile"></div>
-    </Grid>
-
-    </Container>
     </>
-    )
+  );
 }
