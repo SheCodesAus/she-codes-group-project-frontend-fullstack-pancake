@@ -8,6 +8,7 @@ import AboutUsPage from "./pages/AboutUsPage";
 import AllWorkshopsPage from "./pages/AllWorshopsPage";
 import WorkshopDetailPage from "./pages/WorkshopDetailsPage";
 import CreateWorkshopPage from "./pages/CreateWorkshopPage";
+import UpdateWorkshopPage from "./pages/UpdateWorkshopPage";
 import GetStartedPage from "./pages/GetStartedPage";
 import Footer from "./components/common/Footer";
 import UserProfilePage from "./pages/UserProfilePage";
@@ -25,6 +26,7 @@ function App() {
           <Route path="/all-workshops" element={<AllWorkshopsPage />} />
           <Route path="/workshop/:id" element={<WorkshopDetailPage />} />
           <Route path="/create-workshop" element={<CreateWorkshopPage />} />
+          <Route path="/update-workshop/:id" element={<UpdateWorkshopPage />} />
           <Route path="/user-profile/:id" element={<UserProfilePage />} />
         </Routes>
         <Footer />
