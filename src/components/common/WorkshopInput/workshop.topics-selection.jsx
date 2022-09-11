@@ -1,4 +1,5 @@
 import TopicLabel from "./TopicLabel";
+import "./style.css";
 
 export default function TopicsSelection({
   workshopInputDetails,

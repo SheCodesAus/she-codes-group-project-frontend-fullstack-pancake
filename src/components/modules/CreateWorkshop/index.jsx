@@ -4,7 +4,6 @@ import TopicsSelection from "../../common/WorkshopInput/workshop.topics-selectio
 import ExeprienceLevel from "../../common/WorkshopInput/workshop.experience-level";
 import DeliveryMethod from "../../common/WorkshopInput/workshop.delivery-method";
 import { createWorkshop } from "../../../services/workshops/createWorkshop";
-import "./style.css";
 
 export default function CreateWorkshopForm() {
   const [workshopInputDetails, setWorkshopInputDetails] = useState({
