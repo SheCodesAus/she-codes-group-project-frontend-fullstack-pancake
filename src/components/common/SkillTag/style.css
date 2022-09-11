@@ -1,9 +1,9 @@
 .SkillTag {
   border-radius: var(--borderRadius-round);
   background-color: var(--primary-100);
-  padding: 0.75rem;
+  padding: 0.25rem 0.5rem;
   width: fit-content;
-  font-size: 14px;
+  font-size: 12px;
   color: var(--primary-800);
 }
 
