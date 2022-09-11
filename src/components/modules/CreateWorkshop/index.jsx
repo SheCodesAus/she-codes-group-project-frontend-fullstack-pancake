@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import TextInputs from "../../common/WorkshopInput/workshop.text-inputs";
 import TopicsSelection from "../../common/WorkshopInput/workshop.topics-selection";
-import ExeprienceLevel from "./index.experience-level";
+import ExeprienceLevel from "../../common/WorkshopInput/workshop.experience-level";
 import DeliveryMethod from "./index.delivery-method";
 import { createWorkshop } from "../../../services/workshops/createWorkshop";
 import "./style.css";
@@ -20,7 +20,6 @@ export default function CreateWorkshopForm() {
     physical_location: "Brisbane",
   });
   const [submissionMessage, setSubmissionMessage] = useState("");
-
   const token = window.localStorage.getItem("token");
 
   const handleChange = event => {
@@ -39,7 +38,10 @@ export default function CreateWorkshopForm() {
 
   const handleSubmit = async e => {
     e.preventDefault();
-    if (Object.values(workshopInputDetails)) {
+    if (
+      !Object.values(workshopInputDetails).includes("") &&
+      workshopInputDetails.topics.length > 0
+    ) {
       createWorkshop(token, workshopInputDetails)
         .then(data => {
           console.log("create workshop res data: ", data);
