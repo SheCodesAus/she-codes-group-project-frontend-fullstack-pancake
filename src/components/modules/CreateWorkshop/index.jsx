@@ -17,7 +17,7 @@ export default function CreateWorkshopForm() {
     date_and_time: "",
     is_online: false,
     is_in_person: false,
-    physical_location: "Didn't enter",
+    physical_location: "Brisbane",
   });
   const [submissionMessage, setSubmissionMessage] = useState("");
 
