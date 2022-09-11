@@ -1,3 +1,10 @@
+import Container from "../components/common/Container";
+import UpdateWorkshop from "../components/modules/UpdateWorkshop";
+
 export default function UpdateWorkshopPage() {
-  return <>update workshop</>;
+  return (
+    <Container>
+      <UpdateWorkshop />
+    </Container>
+  );
 }
