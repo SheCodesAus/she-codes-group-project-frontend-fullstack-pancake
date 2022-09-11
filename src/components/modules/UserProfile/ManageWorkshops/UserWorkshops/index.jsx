@@ -2,12 +2,13 @@ import React from "react";
 import Grid from "../../../../common/Grid";
 import { useErrorImage } from "../../../../../utilities/error/useErrorImage";
 import "./style.css";
+import { Link } from "react-router-dom";
 
 export default function UserWorkshops({ userWorkshops }) {
   return (
     <Grid>
       {userWorkshops.map((userWorkshop, index) => {
-        const { title, image } = userWorkshop;
+        const { id, title, image } = userWorkshop;
         return (
           <div className="user-workshop-card">
             <div className="user-workshop-card-image" key={index}>
@@ -17,7 +18,9 @@ export default function UserWorkshops({ userWorkshops }) {
               <h3>{title}</h3>
               <div className="button-group buttons-active">
                 <button className="button-danger">Delete</button>
-                <button className="button-primary">Update</button>
+                <Link to={`/update-workshop/${id}`}>
+                  <button className="button-primary">Update</button>
+                </Link>
               </div>
             </div>
           </div>
