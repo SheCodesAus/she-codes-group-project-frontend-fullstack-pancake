@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import TextInputs from "./index.text-inputs";
+import TextInputs from "../../common/WorkshopInput/workshop.text-inputs";
 import TopicsSelection from "./index.topics-selection";
 import ExeprienceLevel from "./index.experience-level";
 import DeliveryMethod from "./index.delivery-method";
@@ -56,7 +56,11 @@ export default function CreateWorkshopForm() {
 
   return (
     <form onSubmit={handleSubmit} className="workshop-form">
-      <TextInputs onChange={handleChange} />
+      <TextInputs
+        formType="create"
+        onChange={handleChange}
+        workshopInputDetails={workshopInputDetails}
+      />
       <TopicsSelection
         workshopInputDetails={workshopInputDetails}
         setWorkshopInputDetails={setWorkshopInputDetails}
