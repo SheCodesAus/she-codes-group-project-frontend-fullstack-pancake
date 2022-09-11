@@ -29,3 +29,27 @@
   border-radius: var(--borderRadius-medium-bottom);
   box-shadow: var(--shadow-2);
 }
+
+.delete-confirm-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  box-shadow: var(--shadow-2);
+  background-color: #fbfcfe;
+  padding: 2rem;
+  border-radius: 25px;
+}
+
+.modal-display {
+  display: flex;
+  z-index: 999;
+}
+
+.modal-hidden {
+  display: none;
+}
