@@ -31,6 +31,12 @@
   border-radius: var(--borderRadius-medium-bottom);
 }
 
+.text-col {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
 .text-row {
   width: 100%;
   display: flex;

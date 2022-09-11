@@ -38,7 +38,7 @@ export default function WorkshopDetail({ payload }) {
             ))}
           </div>
 
-          <SkillLevel level={experience_level} />
+          <SkillLevel level={experience_level} showText={true} />
         </div>
         <div className="workshop-detail-text-row">
           <div className="workshop-detail-text-with-icon">
@@ -47,7 +47,10 @@ export default function WorkshopDetail({ payload }) {
           </div>
           <div className="workshop-detail-text-with-icon">
             <MdLocationPin className="workshop-detail-icon" />
-            <span>{getDeliveryMethod(is_in_person, is_online)}</span>
+            <span>{getDeliveryMethod(is_online, is_in_person)}</span>
+            <span>
+              {is_in_person || is_in_person === "true" ? physical_location : ""}
+            </span>
           </div>
         </div>
         <div className="workshop-detail-text-col">

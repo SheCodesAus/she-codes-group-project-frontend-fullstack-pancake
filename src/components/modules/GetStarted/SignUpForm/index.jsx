@@ -23,6 +23,18 @@ export default function SignUpForm({
       placeholder: "Enter your username ...",
     },
     {
+      type: "text",
+      id: "first_name",
+      label: "First Name",
+      placeholder: "Enter your first name ...",
+    },
+    {
+      type: "text",
+      id: "last_name",
+      label: "Last Name",
+      placeholder: "Enter your last name ...",
+    },
+    {
       type: "email",
       id: "email",
       label: "Email",
