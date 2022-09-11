@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import TextInputs from "../../common/WorkshopInput/workshop.text-inputs";
 import TopicsSelection from "../../common/WorkshopInput/workshop.topics-selection";
 import ExeprienceLevel from "../../common/WorkshopInput/workshop.experience-level";
-import DeliveryMethod from "./index.delivery-method";
+import DeliveryMethod from "../../common/WorkshopInput/workshop.delivery-method";
 import { createWorkshop } from "../../../services/workshops/createWorkshop";
 import "./style.css";
 
@@ -17,8 +17,9 @@ export default function CreateWorkshopForm() {
     date_and_time: "",
     is_online: false,
     is_in_person: false,
-    physical_location: "Brisbane",
+    physical_location: "Empty",
   });
+
   const [submissionMessage, setSubmissionMessage] = useState("");
   const token = window.localStorage.getItem("token");
 
