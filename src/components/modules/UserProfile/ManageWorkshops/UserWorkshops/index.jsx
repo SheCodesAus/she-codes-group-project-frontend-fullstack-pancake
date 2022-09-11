@@ -15,7 +15,7 @@ export default function UserWorkshops({ userWorkshops }) {
               <img src={image} alt={title} onError={useErrorImage} />
             </div>
             <div className="user-workshop-card-manage">
-              <h3>{title}</h3>
+              <h4>{title}</h4>
               <div className="button-group buttons-active">
                 <button className="button-danger">Delete</button>
                 <Link to={`/update-workshop/${id}`}>

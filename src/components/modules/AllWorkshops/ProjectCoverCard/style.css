@@ -43,3 +43,9 @@
   color: var(--primary-700);
   font-weight: 700;
 }
+
+.language-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
