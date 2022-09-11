@@ -15,7 +15,11 @@ export default function Footer() {
         <div className="footer-nav">
           <div className="branding-section">
             <img src={Logo} alt="thinkle_logo" className="footer-logo" />
-            <p>Thinkle is ...</p>
+            <p>
+              Thinkle is all about Connection. A place for brilliant mentors to
+              connect with tech community workshops and hackathons. Get
+              Thinkle-ing!
+            </p>
           </div>
           <nav className="nav-section">
             <div>
@@ -33,7 +37,7 @@ export default function Footer() {
                   <p className="nav-section-title">Welcome</p>
                   <div className="nav-section-menu">
                     <Link to={`/profile/${userId}`}>View Profile</Link>
-                    <Link to="/create-project">Post Workshop</Link>
+                    <Link to="/create-workshop">Create Workshop</Link>
                     <p
                       onClick={() => {
                         localStorage.clear();
