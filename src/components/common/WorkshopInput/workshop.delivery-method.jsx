@@ -27,7 +27,7 @@ export default function DeliveryMethod({ workshopInputDetails, onChange }) {
           {locations.map((location, index) => {
             return (
               <option
-                kdy={index}
+                key={index}
                 selected={
                   location === workshopInputDetails.physical_location
                     ? true
