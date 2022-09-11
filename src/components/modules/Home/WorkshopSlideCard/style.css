@@ -3,6 +3,11 @@
   border-radius: var(--borderRadius-large);
   box-shadow: var(--shadow-2);
   background-color: #fff;
+  transition: var(--transition);
+}
+
+.latest-workshop-slide-card:hover {
+  box-shadow: var(--shadow-4);
 }
 
 .latest-workshop-slide-card-image {
@@ -22,14 +27,10 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  padding: 1.5rem 2rem 0 2rem;
+  padding: 1.5rem 2rem 2rem 2rem;
 }
 
 .latest-workshop-slide-card-text-row {
   display: flex;
   justify-content: space-between;
-}
-
-.latest-workshop-slide-card-p {
-  padding: 1.5rem 2rem 2rem 2rem;
 }
