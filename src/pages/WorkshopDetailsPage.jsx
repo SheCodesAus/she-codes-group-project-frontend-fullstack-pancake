@@ -4,7 +4,7 @@ import Container from "../components/common/Container";
 import Banner from "../components/common/Banner";
 import Loading from "../components/common/Loading";
 import WorkshopDetail from "../components/modules/WorkshopDetail";
-import { getProjectById } from "../services/workshops/getWorkshopById";
+import { getWorkshopById } from "../services/workshops/getWorkshopById";
 import { getUserById } from "../services/users/getUserById";
 
 export default function WorkshopDetailsPage() {
@@ -15,7 +15,7 @@ export default function WorkshopDetailsPage() {
   const [workshopData, setWorkshopData] = useState({});
 
   useEffect(() => {
-    getProjectById(id).then(data => {
+    getWorkshopById(id).then(data => {
       setOrganiserId(data.organiser);
       setWorkshopData(data);
       setLoading(false);

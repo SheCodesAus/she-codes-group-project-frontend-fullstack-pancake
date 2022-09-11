@@ -117,6 +117,10 @@ form {
   align-items: center;
 }
 
+.workshop-form {
+  width: 80%;
+}
+
 button {
   cursor: pointer;
   text-transform: capitalize;

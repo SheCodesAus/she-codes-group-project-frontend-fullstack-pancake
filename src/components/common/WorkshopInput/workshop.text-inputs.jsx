@@ -1,6 +1,10 @@
-import Input from "../../common/Input";
+import Input from "../Input";
 
-export default function TextInputs({ onChange }) {
+export default function TextInputs({
+  workshopInputDetails,
+  onChange,
+  formType,
+}) {
   const textInputFields = [
     {
       type: "text",
@@ -35,15 +39,33 @@ export default function TextInputs({ onChange }) {
 
   return textInputFields.map((field, index) => {
     const { type, id, label, placeholder } = field;
-    return (
-      <Input
-        key={index}
-        type={type}
-        id={id}
-        label={label}
-        placeholder={placeholder}
-        onChange={onChange}
-      />
-    );
+    if (formType === "create") {
+      return (
+        <Input
+          key={index}
+          type={type}
+          id={id}
+          label={label}
+          placeholder={placeholder}
+          onChange={onChange}
+        />
+      );
+    }
+    if (formType === "update") {
+      return (
+        <Input
+          key={index}
+          type={type}
+          id={id}
+          label={label}
+          defaultValue={
+            id === "date_and_time"
+              ? new Date(workshopInputDetails[id]).toISOString().split("T")[0]
+              : workshopInputDetails[id]
+          }
+          onChange={onChange}
+        />
+      );
+    }
   });
 }
