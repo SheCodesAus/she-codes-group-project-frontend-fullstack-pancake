@@ -10,8 +10,8 @@ export default function UserWorkshops({ userWorkshops }) {
       {userWorkshops.map((userWorkshop, index) => {
         const { id, title, image } = userWorkshop;
         return (
-          <div className="user-workshop-card">
-            <div className="user-workshop-card-image" key={index}>
+          <div key={index} className="user-workshop-card">
+            <div className="user-workshop-card-image">
               <img src={image} alt={title} onError={useErrorImage} />
             </div>
             <div className="user-workshop-card-manage">
