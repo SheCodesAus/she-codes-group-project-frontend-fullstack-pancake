@@ -20,6 +20,7 @@ export default function ProjectCoverCard({
 }) {
   const [organiserName, setOrganiserName] = useState("");
   const [loading, setLoading] = useState(true);
+  console.log(new Date(dateAndTime) < new Date() ? "past" : "future");
 
   useEffect(() => {
     getUserById(organiserId).then(data => {
@@ -29,8 +30,11 @@ export default function ProjectCoverCard({
     });
   }, []);
 
+  const renderArchiveCover = () => {
+    return <div className="archive-cover">This workshop has finished</div>;
+  };
   return (
-    <Link to={`/workshop/${id}`}>
+    <Link to={`/workshop/${id}`} className="project-link">
       <div className="project-card-container">
         <div className="project-card-image">
           <img src={image} alt={workshopTitle} onError={useErrorImage} />
@@ -58,6 +62,7 @@ export default function ProjectCoverCard({
           </div>
         </div>
       </div>
+      {new Date(dateAndTime) < new Date() && renderArchiveCover()}
     </Link>
   );
 }
