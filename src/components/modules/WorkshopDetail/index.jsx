@@ -1,4 +1,6 @@
 import React from "react";
+import SkillLevel from "../../common/SkillLevel";
+import SkillTag from "../../common/SkillTag";
 import { useErrorImage } from "../../../utilities/error/useErrorImage";
 import { MdCalendarToday, MdLocationPin } from "react-icons/md";
 import { getDeliveryMethod } from "../../../utilities/getDeliveryMethod";
@@ -11,9 +13,12 @@ export default function WorkshopDetail({ payload }) {
     description,
     image,
     workshop_link,
+    topics,
+    experience_level,
     date_and_time,
     is_in_person,
     is_online,
+    physical_location,
   } = workshopData;
 
   return (
@@ -25,6 +30,15 @@ export default function WorkshopDetail({ payload }) {
         <div className="workshop-detail-text-row">
           <h2>{title}</h2>
           <h3>{organiserName}</h3>
+        </div>
+        <div className="workshop-detail-text-row">
+          <div className="language-tags">
+            {topics.map((language, index) => (
+              <SkillTag key={index}>{language}</SkillTag>
+            ))}
+          </div>
+
+          <SkillLevel level={experience_level} />
         </div>
         <div className="workshop-detail-text-row">
           <div className="workshop-detail-text-with-icon">

@@ -41,17 +41,16 @@ export default function ProjectCoverCard({
             <span>{loading ? "fetching..." : organiserName}</span>
           </div>
           <div className="text-row">
-            <span>{getDeliveryMethod(isOnline, isInPerson)}</span>
-            <span>{new Date(dateAndTime).toLocaleDateString()}</span>
-          </div>
-          <div className="text-row">
             <div className="language-tags">
               {topics.map((language, index) => (
                 <SkillTag key={index}>{language}</SkillTag>
               ))}
             </div>
-
-            <SkillLevel level={experienceLevel} />
+            <SkillLevel level={experienceLevel} showText={false} />
+          </div>
+          <div className="text-row">
+            <span>{getDeliveryMethod(isOnline, isInPerson)}</span>
+            <span>{new Date(dateAndTime).toLocaleDateString()}</span>
           </div>
         </div>
       </div>
