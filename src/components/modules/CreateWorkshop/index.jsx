@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import TextInputs from "../../common/WorkshopInput/workshop.text-inputs";
-import TopicsSelection from "./index.topics-selection";
+import TopicsSelection from "../../common/WorkshopInput/workshop.topics-selection";
 import ExeprienceLevel from "./index.experience-level";
 import DeliveryMethod from "./index.delivery-method";
 import { createWorkshop } from "../../../services/workshops/createWorkshop";

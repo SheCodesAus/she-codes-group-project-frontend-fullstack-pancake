@@ -1,4 +1,4 @@
-import TopicLabel from "./TopicLabel";
+import TopicLabel from "../../modules/CreateWorkshop/TopicLabel";
 
 export default function TopicsSelection({
   workshopInputDetails,
