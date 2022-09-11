@@ -36,8 +36,12 @@ export default function ProjectCoverCard({
           <img src={image} alt={workshopTitle} onError={useErrorImage} />
         </div>
         <div className="project-card-text">
-          <div className="text-row title-row">
-            <h3>{workshopTitle}</h3>
+          <div className="text-col">
+            <h3>
+              {workshopTitle.length < 20
+                ? workshopTitle
+                : `${workshopTitle.slice(0, 20)}...`}
+            </h3>
             <span>{loading ? "fetching..." : organiserName}</span>
           </div>
           <div className="text-row">
