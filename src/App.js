@@ -10,6 +10,7 @@ import WorkshopDetailPage from "./pages/WorkshopDetailsPage";
 import CreateWorkshopPage from "./pages/CreateWorkshopPage";
 import UpdateWorkshopPage from "./pages/UpdateWorkshopPage";
 import GetStartedPage from "./pages/GetStartedPage";
+import NotFoundPage from "./pages/NotFoundPage";
 import Footer from "./components/common/Footer";
 import UserProfilePage from "./pages/UserProfilePage";
 
@@ -28,6 +29,7 @@ function App() {
           <Route path="/create-workshop" element={<CreateWorkshopPage />} />
           <Route path="/update-workshop/:id" element={<UpdateWorkshopPage />} />
           <Route path="/user-profile/:id" element={<UserProfilePage />} />
+          <Route path="/404-not-found" element={<NotFoundPage />} />
         </Routes>
         <Footer />
       </div>
