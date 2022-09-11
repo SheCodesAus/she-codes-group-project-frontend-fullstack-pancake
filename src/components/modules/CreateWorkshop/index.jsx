@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import Input from "../../common/Input";
+import TextInputs from "../../common/WorkshopInput/workshop.text-inputs";
+import TopicsSelection from "../../common/WorkshopInput/workshop.topics-selection";
+import ExeprienceLevel from "../../common/WorkshopInput/workshop.experience-level";
+import DeliveryMethod from "../../common/WorkshopInput/workshop.delivery-method";
 import { createWorkshop } from "../../../services/workshops/createWorkshop";
-import { createWorkshopFormInputFields } from "./constant";
-import "./style.css";
 
 export default function CreateWorkshopForm() {
   const [workshopInputDetails, setWorkshopInputDetails] = useState({
@@ -10,12 +11,15 @@ export default function CreateWorkshopForm() {
     description: "",
     workshop_link: "",
     image: "",
+    topics: [],
+    experience_level: "",
     date_and_time: "",
     is_online: false,
     is_in_person: false,
+    physical_location: "Empty",
   });
-  const [submissionMessage, setSubmissionMessage] = useState("");
 
+  const [submissionMessage, setSubmissionMessage] = useState("");
   const token = window.localStorage.getItem("token");
 
   const handleChange = event => {
@@ -34,7 +38,10 @@ export default function CreateWorkshopForm() {
 
   const handleSubmit = async e => {
     e.preventDefault();
-    if (Object.values(workshopInputDetails)) {
+    if (
+      !Object.values(workshopInputDetails).includes("") &&
+      workshopInputDetails.topics.length > 0
+    ) {
       createWorkshop(token, workshopInputDetails)
         .then(data => {
           console.log("create workshop res data: ", data);
@@ -51,19 +58,20 @@ export default function CreateWorkshopForm() {
 
   return (
     <form onSubmit={handleSubmit} className="workshop-form">
-      {createWorkshopFormInputFields.map((field, index) => {
-        const { type, id, label, placeholder } = field;
-        return (
-          <Input
-            key={index}
-            type={type}
-            id={id}
-            label={label}
-            placeholder={placeholder}
-            onChange={handleChange}
-          />
-        );
-      })}
+      <TextInputs
+        formType="create"
+        onChange={handleChange}
+        workshopInputDetails={workshopInputDetails}
+      />
+      <TopicsSelection
+        workshopInputDetails={workshopInputDetails}
+        setWorkshopInputDetails={setWorkshopInputDetails}
+      />
+      <ExeprienceLevel onChange={handleChange} />
+      <DeliveryMethod
+        onChange={handleChange}
+        workshopInputDetails={workshopInputDetails}
+      />
       <button variant="primary" type="submit" className="button-primary full">
         Submit
       </button>

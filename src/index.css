@@ -71,12 +71,12 @@ code {
 }
 
 h1,
-h2 {
+h2,
+h3,
+h4 {
   font-family: "Montserrat", sans-serif;
 }
 
-h3,
-h4,
 h5,
 h6,
 p,
@@ -108,6 +108,14 @@ h2 {
   font-size: 36px;
 }
 
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 21px;
+}
+
 form {
   flex-grow: 1;
   display: flex;
@@ -115,6 +123,10 @@ form {
   gap: 2rem;
   max-width: 640px;
   align-items: center;
+}
+
+.workshop-form {
+  width: 80%;
 }
 
 button {
@@ -131,6 +143,12 @@ button:hover {
   box-shadow: var(--shadow-3);
 }
 
+.button-group {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
 .button-primary {
   background-color: var(--primary-300);
   color: #fff;
@@ -139,6 +157,12 @@ button:hover {
 .button-secondary {
   background-color: transparent;
   color: var(--primary-300);
+}
+
+.button-danger {
+  background-color: var(--alert-danger);
+  color: var(--white);
+  border: var(--alert-danger);
 }
 
 .full {
