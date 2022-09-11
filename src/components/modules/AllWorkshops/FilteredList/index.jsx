@@ -9,6 +9,8 @@ export default function FilteredList({ filteredData }) {
       title,
       image,
       date_and_time,
+      topics,
+      experience_level,
       is_online,
       is_in_person,
     } = workshop;
@@ -21,6 +23,8 @@ export default function FilteredList({ filteredData }) {
         image={image}
         workshopTitle={title}
         dateAndTime={date_and_time}
+        topics={topics}
+        experienceLevel={experience_level}
         isOnline={is_online}
         isInPerson={is_in_person}
       />
