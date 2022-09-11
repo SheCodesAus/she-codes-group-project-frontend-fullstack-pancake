@@ -5,6 +5,6 @@ const getWorkshop = async id => {
   return response.json();
 };
 
-export const getProjectById = async id => {
+export const getWorkshopById = async id => {
   return getWorkshop(id);
 };

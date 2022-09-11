@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import TextInputs from "./index.text-inputs";
-import TopicsSelection from "./index.topics-selection";
-import ExeprienceLevel from "./index.experience-level";
-import DeliveryMethod from "./index.delivery-method";
+import TextInputs from "../../common/WorkshopInput/workshop.text-inputs";
+import TopicsSelection from "../../common/WorkshopInput/workshop.topics-selection";
+import ExeprienceLevel from "../../common/WorkshopInput/workshop.experience-level";
+import DeliveryMethod from "../../common/WorkshopInput/workshop.delivery-method";
 import { createWorkshop } from "../../../services/workshops/createWorkshop";
-import "./style.css";
 
 export default function CreateWorkshopForm() {
   const [workshopInputDetails, setWorkshopInputDetails] = useState({
@@ -17,10 +16,10 @@ export default function CreateWorkshopForm() {
     date_and_time: "",
     is_online: false,
     is_in_person: false,
-    physical_location: "Brisbane",
+    physical_location: "Empty",
   });
-  const [submissionMessage, setSubmissionMessage] = useState("");
 
+  const [submissionMessage, setSubmissionMessage] = useState("");
   const token = window.localStorage.getItem("token");
 
   const handleChange = event => {
@@ -39,7 +38,10 @@ export default function CreateWorkshopForm() {
 
   const handleSubmit = async e => {
     e.preventDefault();
-    if (Object.values(workshopInputDetails)) {
+    if (
+      !Object.values(workshopInputDetails).includes("") &&
+      workshopInputDetails.topics.length > 0
+    ) {
       createWorkshop(token, workshopInputDetails)
         .then(data => {
           console.log("create workshop res data: ", data);
@@ -56,7 +58,11 @@ export default function CreateWorkshopForm() {
 
   return (
     <form onSubmit={handleSubmit} className="workshop-form">
-      <TextInputs onChange={handleChange} />
+      <TextInputs
+        formType="create"
+        onChange={handleChange}
+        workshopInputDetails={workshopInputDetails}
+      />
       <TopicsSelection
         workshopInputDetails={workshopInputDetails}
         setWorkshopInputDetails={setWorkshopInputDetails}

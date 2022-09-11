@@ -15,7 +15,6 @@ export default function UserProfilePage() {
   const [userAvatar, setUserAvatar] = useState("");
   useEffect(() => {
     getUserById(id).then(data => {
-      console.log("user data: ", data);
       setUsername(data.username);
       setUserAvatar(data.profile_image);
       setLoading(false);
