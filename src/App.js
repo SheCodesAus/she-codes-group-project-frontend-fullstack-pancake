@@ -29,7 +29,7 @@ function App() {
           <Route path="/create-workshop" element={<CreateWorkshopPage />} />
           <Route path="/update-workshop/:id" element={<UpdateWorkshopPage />} />
           <Route path="/user-profile/:id" element={<UserProfilePage />} />
-          <Route path="/404-not-found" element={<NotFoundPage />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
         <Footer />
       </div>
