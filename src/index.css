@@ -71,12 +71,12 @@ code {
 }
 
 h1,
-h2 {
+h2,
+h3,
+h4 {
   font-family: "Montserrat", sans-serif;
 }
 
-h3,
-h4,
 h5,
 h6,
 p,
@@ -106,6 +106,14 @@ h1 {
 
 h2 {
   font-size: 36px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 21px;
 }
 
 form {
