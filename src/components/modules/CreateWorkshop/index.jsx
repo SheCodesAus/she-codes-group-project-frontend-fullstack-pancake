@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import Input from "../../common/Input";
+import TextInputs from "./index.text-inputs";
+import TopicsSelection from "./index.topics-selection";
+import ExeprienceLevel from "./index.experience-level";
+import DeliveryMethod from "./index.delivery-method";
 import { createWorkshop } from "../../../services/workshops/createWorkshop";
-import { createWorkshopFormInputFields } from "./constant";
 import "./style.css";
 
 export default function CreateWorkshopForm() {
@@ -10,9 +12,12 @@ export default function CreateWorkshopForm() {
     description: "",
     workshop_link: "",
     image: "",
+    topics: [],
+    experience_level: "",
     date_and_time: "",
     is_online: false,
     is_in_person: false,
+    physical_location: "Brisbane",
   });
   const [submissionMessage, setSubmissionMessage] = useState("");
 
@@ -51,19 +56,16 @@ export default function CreateWorkshopForm() {
 
   return (
     <form onSubmit={handleSubmit} className="workshop-form">
-      {createWorkshopFormInputFields.map((field, index) => {
-        const { type, id, label, placeholder } = field;
-        return (
-          <Input
-            key={index}
-            type={type}
-            id={id}
-            label={label}
-            placeholder={placeholder}
-            onChange={handleChange}
-          />
-        );
-      })}
+      <TextInputs onChange={handleChange} />
+      <TopicsSelection
+        workshopInputDetails={workshopInputDetails}
+        setWorkshopInputDetails={setWorkshopInputDetails}
+      />
+      <ExeprienceLevel onChange={handleChange} />
+      <DeliveryMethod
+        onChange={handleChange}
+        workshopInputDetails={workshopInputDetails}
+      />
       <button variant="primary" type="submit" className="button-primary full">
         Submit
       </button>

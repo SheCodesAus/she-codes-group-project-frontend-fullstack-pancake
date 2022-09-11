@@ -1,0 +1,16 @@
+.input-button {
+  width: fit-content;
+  padding: 0.65rem 1.25rem;
+  border: 1px solid var(--grey-200);
+  border-radius: var(--borderRadius-large);
+  transition: var(--transition);
+  background-color: var(--grey-200);
+  color: var(--white);
+  cursor: pointer;
+}
+
+.selected-topic {
+  background-color: var(--primary-300);
+  color: #fff;
+  border: 1px solid var(--primary-300);
+}
