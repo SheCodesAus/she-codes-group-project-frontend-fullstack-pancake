@@ -14,7 +14,7 @@ export default function SkillLevel({ level, showText }) {
     }
   };
   return (
-    <div class="skill-level-container">
+    <div className="skill-level-container">
       <div className="skill-level-group">
         <div
           className={`skill-level level-easy ${
