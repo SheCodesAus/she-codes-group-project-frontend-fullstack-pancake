@@ -3,8 +3,8 @@
   align-items: center;
 }
 .skill-level {
-  height: 0.75rem;
-  width: 1.5rem;
+  height: 0.35rem;
+  width: 1rem;
 }
 .level-easy {
   background-color: var(--primary-200);
@@ -18,9 +18,9 @@
   border-radius: 0 99px 99px 0;
 }
 .level-selected {
-  height: 1.5rem;
-  width: 1.5rem;
+  height: 1rem;
+  width: 1.25rem;
   border-radius: var(--borderRadius-round);
-  border: 3px solid #fff;
+  border: 1px solid var(--white);
   z-index: 999;
 }
