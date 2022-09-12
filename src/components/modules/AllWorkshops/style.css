@@ -10,7 +10,7 @@
 
 .filter-sort-wrapper {
   display: flex;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
 @media screen and (min-width: 640px) {

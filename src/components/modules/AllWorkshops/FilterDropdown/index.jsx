@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Input from "../../../common/Input";
+import "./style.css";
 
 const options = [
   "HTML",
@@ -40,20 +41,23 @@ export default function FilterDropdown({ data, setFilteredData }) {
   }, [values]);
 
   return (
-    <Input
-      type="select"
-      width="w-content"
-      multiple={true}
-      onChange={handleChange}
-      value={values}
-    >
-      {options.map((option, index) => {
-        return (
-          <option key={index} value={option}>
-            {option}
-          </option>
-        );
-      })}
-    </Input>
+    <div className="filter-dropdown">
+      <p>Filter by topics</p>
+      <Input
+        type="select"
+        width="w-content"
+        multiple={true}
+        onChange={handleChange}
+        value={values}
+      >
+        {options.map((option, index) => {
+          return (
+            <option key={index} value={option}>
+              {option}
+            </option>
+          );
+        })}
+      </Input>
+    </div>
   );
 }
