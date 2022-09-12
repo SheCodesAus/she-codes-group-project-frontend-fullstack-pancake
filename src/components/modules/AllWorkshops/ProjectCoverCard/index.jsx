@@ -20,7 +20,6 @@ export default function ProjectCoverCard({
 }) {
   const [organiserName, setOrganiserName] = useState("");
   const [loading, setLoading] = useState(true);
-  console.log(new Date(dateAndTime) < new Date() ? "past" : "future");
 
   useEffect(() => {
     getUserById(organiserId).then(data => {
