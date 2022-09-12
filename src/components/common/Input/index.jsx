@@ -16,6 +16,14 @@ export default function Input(props) {
           </>
         );
       case "select":
+        if (props.mutiple === true) {
+          return (
+            <>
+              <label htmlFor={props.id}>{props.label}</label>
+              <select {...props}>{props.children}</select>
+            </>
+          );
+        }
         return (
           <>
             <label htmlFor={props.id}>{props.label}</label>
