@@ -23,6 +23,12 @@ export default function UpdateUserProfileForm({ userId }) {
     updateProfileInputFields = [
       {
         type: "text",
+        id: "profile_image",
+        label: "Put a link to your profile image",
+        defaultValue: profileData["profile_image"],
+      },
+      {
+        type: "text",
         id: "username",
         label: "Username",
         defaultValue: profileData["username"],
@@ -45,12 +51,6 @@ export default function UpdateUserProfileForm({ userId }) {
         label: "Last Name",
         defaultValue: profileData["last_name"],
       },
-      {
-        type: "text",
-        id: "profile_image",
-        label: "Put a link to your profile image",
-        defaultValue: profileData["profile_image"],
-      },
     ];
   }
 
@@ -66,6 +66,7 @@ export default function UpdateUserProfileForm({ userId }) {
         console.log("Update profile response data: ... ", data);
         setSubmitMessage("Yah! Profile update successfully!");
         setSubmitResult("success");
+        window.location.reload();
       });
     } else {
       setSubmitMessage("Please enter all fields");
@@ -85,6 +86,8 @@ export default function UpdateUserProfileForm({ userId }) {
             type={type}
             id={id}
             label={label}
+            src={defaultValue}
+            alt="avatar"
             defaultValue={defaultValue}
             onBlur={handleBlur}
           />
