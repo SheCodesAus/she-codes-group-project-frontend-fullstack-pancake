@@ -15,12 +15,15 @@
 
 .columnImage {
   width: 100%;
+  height: 50vh;
   border-radius: var(--borderRadius-large);
 }
 
 .columnImage img {
   border-radius: var(--borderRadius-large);
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .reverse {

@@ -165,6 +165,11 @@ button:hover {
   border: var(--alert-danger);
 }
 
+.button-founder {
+  background-color: #f6a6d7;
+  color: var(--white);
+  border: #f6a6d7;
+}
 .full {
   width: 100%;
 }

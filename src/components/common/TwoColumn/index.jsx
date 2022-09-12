@@ -18,7 +18,15 @@ export default function TwoColumn({
         <h2>{heading}</h2>
         <p>{paragraph}</p>
         <Link to={link}>
-          <button className="button-primary">{buttonText}</button>
+          <button
+            className={`${
+              buttonText === "Learn more about Ashleigh"
+                ? "button-founder"
+                : "button-primary"
+            } `}
+          >
+            {buttonText}
+          </button>
         </Link>
       </div>
       <div className="columnImage">

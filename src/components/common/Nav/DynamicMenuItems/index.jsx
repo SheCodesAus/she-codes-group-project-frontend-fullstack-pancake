@@ -10,13 +10,15 @@ export default function DynamicMenuItems({
 }) {
   const navigate = useNavigate();
   const [navUsername, setNavUsername] = useState("");
+  const [navAvatar, setNavAvatar] = useState("");
   const loginStatus = window.localStorage.getItem("login");
   const userId = window.localStorage.getItem("user_id");
 
   if (userId) {
     getUserById(userId).then(data => {
-      const { username } = data;
+      const { username, profile_image } = data;
       setNavUsername(username);
+      setNavAvatar(profile_image);
     });
   }
 
@@ -46,7 +48,10 @@ export default function DynamicMenuItems({
               className="dynamic_menu_user menu_item"
               onClick={toggleSidebar}
             >
-              Hi {navUsername}
+              <div className="avatar-username">
+                <img src={navAvatar} alt={navUsername} className="nav-avatar" />
+                Hi {navUsername}
+              </div>
             </div>
           </Link>
           <div className="dynamic_menu_buttons">
