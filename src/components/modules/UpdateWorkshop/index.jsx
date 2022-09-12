@@ -64,7 +64,7 @@ export default function UpdateWorkshopForm({ initialWorkshopData }) {
         <>
           <TextInputs
             formType="update"
-            workshopInputDetails={initialWorkshopData}
+            workshopInputDetails={workshopInputDetails}
             onChange={handleChange}
           />
           <TopicsSelection
