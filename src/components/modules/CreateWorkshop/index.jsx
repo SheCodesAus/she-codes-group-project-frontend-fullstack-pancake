@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import TextInputs from "../../common/WorkshopInput/workshop.text-inputs";
 import TopicsSelection from "../../common/WorkshopInput/workshop.topics-selection";
-import ExeprienceLevel from "../../common/WorkshopInput/workshop.experience-level";
+import ExperienceLevel from "../../common/WorkshopInput/workshop.experience-level";
 import DeliveryMethod from "../../common/WorkshopInput/workshop.delivery-method";
 import { createWorkshop } from "../../../services/workshops/createWorkshop";
 
@@ -83,7 +83,7 @@ export default function CreateWorkshopForm() {
         workshopInputDetails={workshopInputDetails}
         setWorkshopInputDetails={setWorkshopInputDetails}
       />
-      <ExeprienceLevel onChange={handleChange} />
+      <ExperienceLevel onChange={handleChange} />
       <DeliveryMethod
         onChange={handleChange}
         workshopInputDetails={workshopInputDetails}

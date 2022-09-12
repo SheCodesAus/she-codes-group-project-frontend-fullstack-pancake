@@ -1,6 +1,6 @@
 import Input from "../Input";
 
-export default function ExeprienceLevel({ onChange, currentLevel }) {
+export default function ExperienceLevel({ onChange, currentLevel }) {
   return (
     <Input
       type="select"

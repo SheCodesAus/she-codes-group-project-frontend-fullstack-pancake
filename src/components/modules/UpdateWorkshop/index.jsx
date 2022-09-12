@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import TextInputs from "../../common/WorkshopInput/workshop.text-inputs";
 import TopicsSelection from "../../common/WorkshopInput/workshop.topics-selection";
-import ExeprienceLevel from "../../common/WorkshopInput/workshop.experience-level";
+import ExperienceLevel from "../../common/WorkshopInput/workshop.experience-level";
 import DeliveryMethod from "../../common/WorkshopInput/workshop.delivery-method";
 import { updateWorkshopById } from "../../../services/workshops/updateWorkshopById";
 
@@ -71,7 +71,7 @@ export default function UpdateWorkshopForm({ initialWorkshopData }) {
             workshopInputDetails={workshopInputDetails}
             setWorkshopInputDetails={setWorkshopInputDetails}
           />
-          <ExeprienceLevel
+          <ExperienceLevel
             onChange={handleChange}
             currentLevel={initialWorkshopData.experience_level}
           />
