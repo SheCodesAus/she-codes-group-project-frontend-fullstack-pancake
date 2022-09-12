@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Grid from "../../common/Grid";
+import FilterDropdown from "./FilterDropdown";
 import FilteredList from "./FilteredList";
 import SearchBar from "./SearchBar";
 import SortDropdown from "./SortDropdown";
@@ -11,11 +12,14 @@ export default function AllWorkshops({ data }) {
   return (
     <>
       <div className="search-filter-sort-container">
-        <SortDropdown
-          data={data}
-          filteredData={filteredData}
-          setFilteredData={setFilteredData}
-        />
+        <div className="filter-sort-wrapper">
+          <SortDropdown
+            data={data}
+            filteredData={filteredData}
+            setFilteredData={setFilteredData}
+          />
+          <FilterDropdown data={data} setFilteredData={setFilteredData} />
+        </div>
         <SearchBar data={data} setFilteredData={setFilteredData} />
       </div>
       <Grid>
