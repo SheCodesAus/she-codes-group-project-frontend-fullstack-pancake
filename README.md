@@ -25,6 +25,8 @@ The Organiser user group will be community builders and tech leaders who are res
 
 The Mentor user group will likely work within technology and will be technologically savvy. We anticipate the Mentors will use the platform on either mobile or desktop. 
 
+We have included responsive design.
+
 
 ## How to run this project? 🏃‍
 
