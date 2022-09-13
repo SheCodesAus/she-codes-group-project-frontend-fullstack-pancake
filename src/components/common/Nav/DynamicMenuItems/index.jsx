@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { useDefaultAvatar } from "../../../../utilities/error/useDefaultAvatar";
 import { getUserById } from "../../../../services/users/getUserById";
 import "./style.css";
 
@@ -49,7 +50,12 @@ export default function DynamicMenuItems({
               onClick={toggleSidebar}
             >
               <div className="avatar-username">
-                <img src={navAvatar} alt={navUsername} className="nav-avatar" />
+                <img
+                  src={navAvatar}
+                  alt={navUsername}
+                  onError={useDefaultAvatar}
+                  className="nav-avatar"
+                />
                 Hi {navUsername}
               </div>
             </div>
