@@ -11,11 +11,13 @@ export default function AllWorkshops({ data }) {
   return (
     <>
       <div className="search-filter-sort-container">
-        <SortDropdown
-          data={data}
-          filteredData={filteredData}
-          setFilteredData={setFilteredData}
-        />
+        <div className="filter-sort-wrapper">
+          <SortDropdown
+            data={data}
+            filteredData={filteredData}
+            setFilteredData={setFilteredData}
+          />
+        </div>
         <SearchBar data={data} setFilteredData={setFilteredData} />
       </div>
       <Grid>

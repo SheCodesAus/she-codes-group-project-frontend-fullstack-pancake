@@ -8,9 +8,11 @@ export default function UserProfile({ userId }) {
 
   return (
     <div className="profile-container">
-      <div className="button-group">
+      <div className="button-group button-tabs">
         <button
-          className="button-primary"
+          className={`button-tab ${
+            showComponent === "workshop" ? "selected" : ""
+          }`}
           onClick={() => {
             setShowComponent("workshop");
           }}
@@ -18,7 +20,9 @@ export default function UserProfile({ userId }) {
           Manage Workshops
         </button>
         <button
-          className="button-primary"
+          className={`button-tab ${
+            showComponent === "profile" ? "selected" : ""
+          }`}
           onClick={() => {
             setShowComponent("profile");
           }}

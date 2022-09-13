@@ -10,6 +10,18 @@
   gap: 1.5rem;
 }
 
+.nav-avatar {
+  border-radius: 999px;
+  height: 2rem;
+  width: 2rem;
+  object-fit: cover;
+}
+
+.avatar-username {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
 @media screen and (min-width: 850px) {
   .dynamic_menu_items {
     flex-direction: row;

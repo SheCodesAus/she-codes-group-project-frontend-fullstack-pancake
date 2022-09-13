@@ -22,21 +22,11 @@ export default function DeliveryMethod({ workshopInputDetails, onChange }) {
           type="select"
           id="physical_location"
           label="Which city will your workshop be held in?"
+          defaultValue={workshopInputDetails.physical_location}
           onChange={onChange}
         >
           {locations.map((location, index) => {
-            return (
-              <option
-                kdy={index}
-                selected={
-                  location === workshopInputDetails.physical_location
-                    ? true
-                    : false
-                }
-              >
-                {location}
-              </option>
-            );
+            return <option key={index}>{location}</option>;
           })}
         </Input>
       );

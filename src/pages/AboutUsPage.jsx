@@ -5,7 +5,7 @@ import TwoColumnNoButton from "../components/modules/AboutUs/TwoColumnNoButton";
 import Placeholder from "../assets/images/placeholder.svg";
 import Grid from "../components/common/Grid";
 import MeetTheTeamCard from "../components/modules/AboutUs/MeetTheTeam";
-import Ashleigh from "../assets/images/Ashleigh_Headshot.jpeg";
+import Ashleigh from "../assets/images/Ashleigh_Headshot_Round.png";
 
 const paragraph1 = (
   <p>

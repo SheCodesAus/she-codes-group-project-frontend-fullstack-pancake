@@ -46,6 +46,8 @@ export default function TextInputs({
           type={type}
           id={id}
           label={label}
+          src={workshopInputDetails.image}
+          alt={id}
           placeholder={placeholder}
           onChange={onChange}
         />
@@ -58,6 +60,8 @@ export default function TextInputs({
           type={type}
           id={id}
           label={label}
+          src={workshopInputDetails[id]}
+          alt={id}
           defaultValue={
             id === "date_and_time"
               ? new Date(workshopInputDetails[id]).toISOString().split("T")[0]

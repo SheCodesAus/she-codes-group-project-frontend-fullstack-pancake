@@ -11,13 +11,16 @@ export default function HomePage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    getAllWorkshops().then((data) => {
+    getAllWorkshops().then(data => {
       const latest = data
-        .sort(
-          (a, b) =>
-            new Date(a.date_and_time).getTime() -
-            new Date(b.date_and_time).getTime()
-        )
+        .sort((a, b) => {
+          if (new Date(a.date_and_time) > new Date()) {
+            return (
+              new Date(a.date_and_time).getTime() -
+              new Date(b.date_and_time).getTime()
+            );
+          }
+        })
         .slice(0, 5);
       setLatestWorkshopsData(latest);
       setLoading(false);

@@ -21,6 +21,7 @@
 .columnImage img {
   border-radius: var(--borderRadius-large);
   width: 100%;
+  object-fit: cover;
 }
 
 .reverse {

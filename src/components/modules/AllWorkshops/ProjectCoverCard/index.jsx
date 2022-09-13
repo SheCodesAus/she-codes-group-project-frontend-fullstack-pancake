@@ -29,15 +29,22 @@ export default function ProjectCoverCard({
     });
   }, []);
 
+  const renderArchiveCover = () => {
+    return <div className="archive-cover">This workshop has finished</div>;
+  };
   return (
-    <Link to={`/workshop/${id}`}>
+    <Link to={`/workshop/${id}`} className="project-link">
       <div className="project-card-container">
         <div className="project-card-image">
           <img src={image} alt={workshopTitle} onError={useErrorImage} />
         </div>
         <div className="project-card-text">
-          <div className="text-row title-row">
-            <h3>{workshopTitle}</h3>
+          <div className="text-col">
+            <h3>
+              {workshopTitle.length < 20
+                ? workshopTitle
+                : `${workshopTitle.slice(0, 20)}...`}
+            </h3>
             <span>{loading ? "fetching..." : organiserName}</span>
           </div>
           <div className="text-row">
@@ -54,6 +61,7 @@ export default function ProjectCoverCard({
           </div>
         </div>
       </div>
+      {new Date(dateAndTime) < new Date() && renderArchiveCover()}
     </Link>
   );
 }

@@ -2,8 +2,15 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  width: 100%;
+}
+
+.banner span {
+  color: var(--primary-400);
+  font-family: "Montserrat", sans-serif;
 }
 
 .center-align {
   align-items: center;
+  text-align: center;
 }

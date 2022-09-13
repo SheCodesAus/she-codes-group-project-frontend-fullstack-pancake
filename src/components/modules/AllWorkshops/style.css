@@ -1,7 +1,26 @@
 .search-filter-sort-container {
   display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
   width: 100%;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 2rem;
+}
+
+.filter-sort-wrapper {
+  display: flex;
+  gap: 1rem;
+}
+
+@media screen and (min-width: 640px) {
+  .search-filter-sort-container {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
 }
