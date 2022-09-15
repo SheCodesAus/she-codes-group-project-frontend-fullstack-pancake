@@ -2,7 +2,7 @@ import React from "react";
 import Container from "../components/common/Container";
 import TwoColumn from "../components/common/TwoColumn";
 import TwoColumnNoButton from "../components/modules/AboutUs/TwoColumnNoButton";
-import Placeholder from "../assets/images/placeholder.svg";
+import Placeholder from "../assets/images/talks.jpg";
 import Grid from "../components/common/Grid";
 import MeetTheTeamCard from "../components/modules/AboutUs/MeetTheTeam";
 import Ashleigh from "../assets/images/Ashleigh_Headshot_Round.png";
