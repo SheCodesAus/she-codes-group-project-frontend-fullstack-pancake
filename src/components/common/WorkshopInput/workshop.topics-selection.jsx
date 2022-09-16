@@ -8,6 +8,7 @@ export default function TopicsSelection({
   const topics = [
     "HTML",
     "CSS",
+    "JavaScript",
     "Python",
     "Django",
     "DRF",
