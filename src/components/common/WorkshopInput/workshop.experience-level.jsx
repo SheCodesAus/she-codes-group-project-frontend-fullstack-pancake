@@ -10,9 +10,10 @@ export default function ExperienceLevel({ onChange, currentLevel }) {
       onChange={onChange}
     >
       <option></option>
-      <option>Entry-level</option>
-      <option>Intermediate</option>
-      <option>Advanced</option>
+      <option value="EL">Entry Level</option>
+      <option value="INT">Intermediate</option>
+      <option value="ADV">Advanced</option>
+      <option value="ALL">ALL</option>
     </Input>
   );
 }
