@@ -32,6 +32,19 @@
   width: 100%;
   height: 40vh;
   overflow: hidden;
+  position: relative;
+}
+
+.image-overlay-cover-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-400);
+  border-radius: var(--borderRadius-large-top);
+  opacity: 25%;
+  z-index: 999;
 }
 
 .project-card-image img {
