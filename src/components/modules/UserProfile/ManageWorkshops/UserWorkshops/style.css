@@ -12,8 +12,20 @@
   width: 100%;
   height: 35vh;
   border-radius: var(--borderRadius-medium-top);
+  position: relative;
 }
 
+.image-overlay-user-workshop-cover-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-400);
+  border-radius: var(--borderRadius-large-top);
+  opacity: 25%;
+  z-index: 999;
+}
 .user-workshop-card-image img {
   width: 100%;
   height: 35vh;
