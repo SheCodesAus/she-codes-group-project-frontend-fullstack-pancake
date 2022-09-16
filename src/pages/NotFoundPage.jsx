@@ -7,7 +7,7 @@ export default function NotFoundPage() {
   return (
     <>
       <Container>
-        <Banner>Uh oh... Nothing to see here! 👀</Banner>
+        <Banner variant="center-align">Uh oh... Nothing to see here! 👀</Banner>
         <Container></Container>
         <Link to="/">
           <button className="button-primary">Let's go back home</button>
