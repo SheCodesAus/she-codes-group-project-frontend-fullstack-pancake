@@ -18,7 +18,7 @@ export default function Carousel({ title, subTitle, slides }) {
           onClick={() => {
             currentSlideIndex !== 0
               ? setCurrentSlideIndex(currentSlideIndex - 1)
-              : setCurrentSlideIndex(slides.currentSlideIndex - 1);
+              : setCurrentSlideIndex(slides.length - 1);
           }}
         >
           <MdKeyboardArrowLeft />
