@@ -2,7 +2,7 @@
 
 The Fullstack Pancakes team has created a website, **Thinkle**💡, that is designed to allow workshop organisers to attract mentors to their workshops.
 ### Heroku Link
-[https://whispering-lake-52626.herokuapp.com/workshops/](https://guarded-beyond-50913.herokuapp.com/)
+[Click me](https://guarded-beyond-50913.herokuapp.com/)
 
 ## About Thinkle💡
 
