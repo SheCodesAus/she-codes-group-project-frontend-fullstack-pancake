@@ -4,8 +4,7 @@ import TwoColumn from "../components/common/TwoColumn";
 import Carousel from "../components/modules/Home/Carousel";
 import Loading from "../components/common/Loading";
 import Placeholder from "../assets/images/talk.jpg";
-// import Girls from "../assets/images/passion.webp";
-import Girls from "../assets/images/workshop.jpg";
+import TeamPancake from "../assets/images/team_pancake.jpeg";
 import { getAllWorkshops } from "../services/workshops/getAllWorkshops";
 
 export default function HomePage() {
@@ -57,7 +56,7 @@ export default function HomePage() {
           heading="Made by some girls passionate about tech! 👩‍💻"
           paragraph="Thinkle was created as part of the She Codes Plus program. It's a pretty cool story and we'd love to tell you more!"
           buttonText="Learn More"
-          image={Girls}
+          image={TeamPancake}
           link="/about-us"
         />
       </Container>
