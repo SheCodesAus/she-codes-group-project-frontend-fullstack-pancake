@@ -36,6 +36,7 @@ export default function ProjectCoverCard({
     <Link to={`/workshop/${id}`} className="project-link">
       <div className="project-card-container">
         <div className="project-card-image">
+          <div className="image-overlay-cover-card"></div>
           <img src={image} alt={workshopTitle} onError={useErrorImage} />
         </div>
         <div className="project-card-text">

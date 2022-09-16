@@ -56,7 +56,7 @@ export default function CreateWorkshopForm() {
             navigate(`/workshop/${data.id}`);
           } else {
             setSubmissionMessage(
-              "Image and workshop link should be valid URL."
+              "Some input fields failed, please check all fields are valid"
             );
             setSubmissionResult("fail");
           }

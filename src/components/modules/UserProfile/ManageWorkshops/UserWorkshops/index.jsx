@@ -22,6 +22,7 @@ export default function UserWorkshops({ userWorkshops }) {
           <div key={index}>
             <div className="user-workshop-card">
               <div className="user-workshop-card-image">
+                <div className="image-overlay-user-workshop-cover-card"></div>
                 <img src={image} alt={title} onError={useErrorImage} />
               </div>
               <div className="user-workshop-card-manage">

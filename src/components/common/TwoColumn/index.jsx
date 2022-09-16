@@ -30,6 +30,11 @@ export default function TwoColumn({
         </Link>
       </div>
       <div className="columnImage">
+        <div
+          className={`image-overlay  ${
+            buttonText === "Learn more about Ashleigh" ? "no-overlay" : ""
+          }`}
+        ></div>
         <img src={image} alt={heading} />
       </div>
     </div>

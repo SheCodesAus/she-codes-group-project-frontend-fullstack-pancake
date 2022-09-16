@@ -13,6 +13,11 @@ export default function TwoColumnNoButton({
         <p>{paragraph}</p>
       </div>
       <div className="columnImage">
+        <div
+          className={`image-overlay  ${
+            heading === "Meet our Founder: Ashleigh Wilson!" ? "no-overlay" : ""
+          }`}
+        ></div>
         <img src={image} alt={heading} />
       </div>
     </div>

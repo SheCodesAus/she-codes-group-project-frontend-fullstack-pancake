@@ -40,7 +40,7 @@ export default function UpdateWorkshopForm({ initialWorkshopData }) {
         .then(data => {
           console.log("update workshop res data: ", data);
           if (data.id) {
-            setSubmissionMessage("Workshop update successfully");
+            setSubmissionMessage("Workshop update successful");
             setSubmissionResult("success");
           } else {
             setSubmissionMessage(

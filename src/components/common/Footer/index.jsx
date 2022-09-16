@@ -36,7 +36,7 @@ export default function Footer() {
                 <>
                   <p className="nav-section-title">Welcome</p>
                   <div className="nav-section-menu">
-                    <Link to={`/profile/${userId}`}>View Profile</Link>
+                    <Link to={`/user-profile/${userId}`}>View Profile</Link>
                     <Link to="/create-workshop">Create Workshop</Link>
                     <p
                       onClick={() => {

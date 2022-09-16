@@ -18,6 +18,7 @@ export default function WorkshopSlideCard({ slide }) {
     <Link to={`workshop/${id}`} className="latest-workshop-slide-card">
       <div>
         <div className="latest-workshop-slide-card-image">
+          <div className="image-overlay-slide"></div>
           <img src={image} alt={title} onError={useErrorImage} />
         </div>
         <div className="latest-workshop-slide-card-text">
